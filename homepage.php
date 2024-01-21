@@ -42,16 +42,16 @@ get_header();
 				</div>
 			</div>
 		</div>
-		<div class="intrto">
+		<div class="box intro">
 			<div class="container">
 				<div class="row">
 					<div class="col-12 text-center">
-						<h2>Let's Create Something Defining</h2>
+						<h2>Let's Create Something <span>Defining</span></h2>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="sizzle-container">
+		<div class="box sizzle">
 			<div class="container">
 			<div class="row">
 					<div class="col-12 text-center">
@@ -61,10 +61,10 @@ get_header();
 				</div>
 			</div>
 		</div>
-		<div class="solutions">
+		<div class="box solutions">
 			<div class="container">
 			<div class="row">
-					<div class="col-12 text-center">
+					<div class="box-title col-12 text-center">
 						<h3>We Create</h3>
 						<h4>Strategic Solutions</h4>
 					</div>
