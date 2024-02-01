@@ -46,7 +46,7 @@ get_header();
 			<div class="container">
 				<div class="row">
 					<div class="col-12 text-center">
-						<h2>Let's Create Something <span>Defining</span></h2>
+						<h2>Let's Creates Something <span>Defining</span></h2>
 					</div>
 				</div>
 			</div>
