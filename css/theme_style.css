@@ -3,7 +3,9 @@
 Custome Theme Styles
 ********************/
 
-/** Typography **/
+/*********** 
+  Typography
+************/
 body {
   font-family: 'Nanum Gothic', sans-serif;
   font-size: 16px;
@@ -17,18 +19,35 @@ h2 {
   font-size: 2em;
 }
 
-/** Header **/
+/******** 
+  Header 
+********/
+.post,
+.page {
+  margin: 0;
+}
 
 nav.navbar {
   background-color: #ffffff;
   padding: 50px 5px;
 }
 
-/** Main **/
+#primary-menu.navbar-nav li a {
+  font-size: 1.5281em;
+  color: #4d3c38;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.5em;
+}
+
+/******** 
+  Main 
+********/
 
 .box {
-  padding: 1rem 1rem;
-  margin: 2rem 2rem;
+  padding: 1rem;
+  margin: 2rem;
 }
 
 .box-title {
@@ -39,8 +58,22 @@ nav.navbar {
   font-size: 1.5em;
 }
 
+.promos {
+  padding: 2rem;
+}
+
 /** Footer **/
-footer.site-footer {
+footer {
   background-color: #4f3b37;
+  color: #fff;
   padding: 2rem 1rem;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .site-info {
+  font-size: 0.8331em;
+  padding: 2rem;
 }
