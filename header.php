@@ -27,9 +27,8 @@
 	<header id="header" class="site-header">
 		<nav class="navbar navbar-expand-lg">
 			<div class="container-fluid">
-						<a class="navbar-brand" href="#">
-							<?php the_custom_logo(); ?>
-						</a>
+						<?php /*the_custom_logo();*/ ?>
+						<?php include 'logo-svg.php'; ?>
 						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 						</button>
