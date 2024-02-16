@@ -118,6 +118,26 @@ nav.navbar {
   margin: 0;
 }
 
+.solutions-container {
+  max-width: 960px;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.solutions .card {
+  background: none;
+  border: none;
+}
+
+.solutions .card-body {
+  padding: 0.5rem;
+}
+
+.solutions .card-img-container {
+  max-width: 10rem;
+}
+
 /** Footer **/
 footer {
   background-color: #4f3b37;

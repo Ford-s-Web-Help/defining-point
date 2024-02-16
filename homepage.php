@@ -77,27 +77,52 @@ get_header();
 			</div>
 		</div>
 		<div class="solutions box">
-			<div class="container justify-content-around text-center">
+			<div class="container text-center">
 			   <div class="row">
 					<div class="box-title col-12">
 						<h3>We Create</h3>
 						<h4>Strategic Solutions</h4>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-6">
-						events
-					</div>
-					<div class="col-6">
-						creative
-					</div>
-					<div class="col-6">
-						tech
-					</div>
-					<div class="col-6">
-						broadcast
-					</div>
-				</div>
+				
+				<?php 
+
+					$posts = get_posts(array(
+						'posts_per_page'    => 4,
+						'post_type'         => 'services'
+					));
+
+					if( $posts ): ?>
+						
+						<div class="solutions-container">
+							<div class="row">
+							<?php foreach( $posts as $post ): 
+								
+								setup_postdata( $post );
+								
+								?>
+								<div class="col-xl-6 col-sm-6">
+									<a class="text-decoration-none" href="<?php the_permalink(); ?>">
+										<div class="card">
+											<div class="row">
+												<div class="card-img-container col-4">
+													<img src="<?php the_field('service_image'); ?>" class="card-img-top" alt="<?php the_title(''); ?>">
+												</div>
+												<div class="card-body text-start align-text-bottom col-8">
+													<h5 class="card-title"><?php the_title(''); ?></h5>
+													<p class="card-text"><?php the_field('service_summary'); ?></p>
+												</div>
+											</div>
+										</div>
+									</a>
+								</div>
+							<?php endforeach; ?>
+							</div>
+						</div>
+						
+						<?php wp_reset_postdata(); ?>
+
+					<?php endif; ?>	
 			</div>
 		</div>
 		
