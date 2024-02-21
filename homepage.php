@@ -37,7 +37,7 @@ get_header();
 								<div class="carousel-item active">
 									<div class="slide-overlay">
 									</div>
-									<img src="<?php the_field('slide_image'); ?>" class="d-block w-100" alt="<?php the_field('slide_title'); ?>">
+									<img src="<?php the_field('slide_image'); ?>" class="d-block w-100 img-fluid" alt="<?php the_field('slide_title'); ?>">
 								</div>
 								
 							<?php endforeach; ?>
@@ -101,12 +101,12 @@ get_header();
 								setup_postdata( $post );
 								
 								?>
-								<div class="col-xl-6 col-sm-6">
+								<div class="col-12 col-sm-6 col-xl-6">
 									<a class="text-decoration-none" href="<?php the_permalink(); ?>">
 										<div class="card">
 											<div class="row">
 												<div class="card-img-container col-4">
-													<img src="<?php the_field('service_image'); ?>" class="card-img-top" alt="<?php the_title(''); ?>">
+													<img src="<?php the_field('service_image'); ?>" class="card-img-top img-fluid" alt="<?php the_title(''); ?>">
 												</div>
 												<div class="card-body text-start align-text-bottom col-8">
 													<h5 class="card-title"><?php the_title(''); ?></h5>
@@ -118,7 +118,11 @@ get_header();
 								</div>
 							<?php endforeach; ?>
 							</div>
+							<div class="row">
+								<button class="btn btn btn-outline-secondary">Explore Our Services</button>
+							</div>
 						</div>
+						
 						
 						<?php wp_reset_postdata(); ?>
 
@@ -150,7 +154,7 @@ get_header();
 									<?php the_field('promo_subtitle'); ?>
 								</div>
 								<div class="promo-btn">
-									<a class="btn btn-primary" href="<?php the_field('promo_link'); ?>" role="button"><?php the_field('promo_link_text'); ?></a>
+									<button class="btn btn-outline-light" href="<?php the_field('promo_link'); ?>" role="button"><?php the_field('promo_link_text'); ?></button>
 								</div>
 							</div>
 							</div>
