@@ -11,7 +11,12 @@ body {
   font-size: 16px;
 }
 h1 {
-  font-family: 'Courier New', Courier, monospace;
+  color: #ffffff;
+  font-size: 5.2581em;
+}
+
+h1.entry-title {
+  text-transform: uppercase;
 }
 
 h2 {
@@ -27,9 +32,23 @@ h2 {
   margin: 0;
 }
 
+#svg-logo {
+  display: block;
+  position: absolute;
+  top: -50px;
+  left: -100px;
+  width: 255px;
+  z-index: 9999;
+  margin-left: 8rem;
+}
+
 nav.navbar {
   background-color: #ffffff;
   padding: 50px 5px;
+}
+
+.menu-menu-1-container {
+  margin: 0 3rem 0 0;
 }
 
 #primary-menu.navbar-nav li a {
@@ -44,22 +63,192 @@ nav.navbar {
 /******** 
   Main 
 ********/
+.page-title {
+  background-size: cover;
+  background-position: center;
+  padding: 8rem 0;
+}
+
+.page-body {
+  margin: 3em auto;
+}
+
+.page-body .row {
+  padding: 3em;
+}
 
 .box {
-  padding: 1rem;
+  padding: 4rem;
   margin: 2rem;
+}
+
+.box h3 {
+  font-size: 1.2169em;
+  padding: 1rem 0;
+}
+
+.box h4 {
+  font-size: 3.0081em;
 }
 
 .box-title {
   margin-bottom: 2rem;
 }
 
+/* @keyframes growText {
+  from {
+    font-size: 1.5em;
+  }
+  to {
+    font-size: 2em;
+  }
+} */
+
+/* The element to apply the animation to */
 .intro h2 span {
-  font-size: 1.5em;
+  width: 6.25rem;
+  height: 6.25rem;
+  font-size: 1em;
+  animation-name: growText;
+  animation-duration: 3s;
 }
+
+/************ 
+  Slideshows 
+************/
+.slideshow .container-fluid {
+  padding: 0;
+}
+
+.slideshow,
+.carousel-control-next:not(:disabled),
+.carousel-control-prev:not(:disabled) {
+  cursor: url('../img/tdplogo-cursor.png'), auto;
+}
+
+/******** 
+  Promos 
+********/
 
 .promos {
   padding: 2rem;
+}
+
+/*********** 
+  Solutions
+***********/
+.solutions.box {
+  background-color: #f9f9f9;
+  margin: 0;
+}
+
+.solutions-container {
+  max-width: 60rem;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.solutions .card {
+  background: none;
+  border: none;
+}
+
+.solutions .card-body {
+  padding: 0.5rem;
+}
+
+.solutions .card-img-container {
+  max-width: 10rem;
+}
+
+.solutions .btn-outline-secondary {
+  border-radius: 0;
+  max-width: 15rem;
+  margin: 2rem auto;
+  padding: 0.7rem;
+  text-transform: uppercase;
+}
+
+/** About Page **/
+
+.about .row {
+  padding: 4rem 0;
+}
+
+.abt-grey {
+  background-color: #f9f9f9;
+}
+
+.structure {
+  padding: 4rem 0;
+}
+
+.structure h3 {
+  font-size: 2em;
+}
+
+.structure .container {
+  max-width: 70rem;
+  padding: 4rem;
+}
+
+.structure .card {
+  color: #fff;
+}
+
+.structure .card h2 {
+  font-size: 1.2em;
+}
+
+.structure .card p {
+  font-size: 0.8em;
+}
+
+.structure .card .card-img-overlay {
+  display: none;
+}
+
+.structure .card:hover + .card-img-overlay {
+  display: block;
+}
+
+.structure .card:hover + .red:hover {
+  background: #f1392d;
+  opacity: 0.9;
+}
+
+.structure .card .blue:hover {
+  background: #116bab;
+  opacity: 0.9;
+}
+
+.structure .card .green:hover {
+  background: #a7cf53;
+  opacity: 0.9;
+}
+
+.structure .card .gold:hover {
+  background: #e9af4f;
+  opacity: 0.9;
+}
+
+/** Contact Form **/
+.contact-info {
+  padding: 0 4rem;
+}
+.contact-box .card {
+  border: none;
+}
+
+.contact-box .card-title {
+  text-transform: uppercase;
+}
+
+.contact-form {
+  padding: 4rem;
+  margin: 0 !important;
+  border: 0.01rem solid #54403c;
 }
 
 /** Footer **/

@@ -1,0 +1,66 @@
+.st0{fill:#AAD039;}
+.st1{fill:#036BAE;}
+.st2{fill:#7E7E81;}
+.st3{fill:#ED1C24;}
+.st4{fill:#E8B139;}
+.st5{fill:#EF4623;}
+/* This is the main brown circle */
+.st6{fill:#4E3C38; stroke:#fff; stroke:#FFFFFF; stroke-width:5.0105; stroke-miterlimit:10;}
+
+
+.st7{fill:#FFFFFF;}
+.st8{fill:none;stroke:#FFFFFF;stroke-width:1.0105;stroke-miterlimit:10;}
+
+.lines {
+ transform-origin: 516px 516px;
+ opacity: .0;
+ transform: scale(0.1);
+
+}
+
+.circularLogo + .lines{
+    animation: showLines .6s ease forwards;
+}
+
+
+#redLineTop, #redLineBottom{
+ transform-origin: 516px 516px;
+ animation: rotateAnticlockwise 10s linear infinite;
+}
+#yellowBigLine, #blueBigLine{
+ transform-origin: 516px 516px;
+ animation: rotateClockwise 10s linear infinite;
+}
+#smallGreyLine, #smallBlueLine, #smallRedLine{
+ transform-origin: 516px 516px;
+ animation: rotateAnticlockwise 15s linear infinite;
+}
+#smallerYellowLine, #greenBigLine{
+ transform-origin: 516px 516px;
+ animation: rotateClockwise 15s linear infinite;
+}
+#outerBlueLine, #outerGreyLine, #outerGreenLine, #outerBlueLine{
+ transform-origin: 516px 516px;
+ animation: rotateAnticlockwise 10s linear infinite;
+}
+
+@keyframes rotateAnticlockwise {
+100%{
+    transform: rotate(-360deg);
+}
+}
+@keyframes rotateClockwise {
+100%{
+    transform: rotate(360deg);
+}
+}
+
+@keyframes showLines {
+40% {
+  opacity: 0;
+}
+100% {
+  transform: scale(1);
+  opacity: 1;
+}
+}
