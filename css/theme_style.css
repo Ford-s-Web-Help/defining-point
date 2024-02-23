@@ -2,7 +2,11 @@
 /*******************
 Custome Theme Styles
 ********************/
-
+a:visited,
+a:active {
+  color: #000;
+  text-decoration: none;
+}
 /*********** 
   Typography
 ************/
@@ -126,14 +130,6 @@ nav.navbar {
   cursor: url('../img/tdplogo-cursor.png'), auto;
 }
 
-/******** 
-  Promos 
-********/
-
-.promos {
-  padding: 2rem;
-}
-
 /*********** 
   Solutions
 ***********/
@@ -147,6 +143,11 @@ nav.navbar {
   width: 100%;
   padding: 0;
   margin: 0 auto;
+}
+
+.solutions a:visited,
+.solutions a:active {
+  color: #000;
 }
 
 .solutions .card {
@@ -168,6 +169,14 @@ nav.navbar {
   margin: 2rem auto;
   padding: 0.7rem;
   text-transform: uppercase;
+}
+
+/******** 
+  Promos 
+********/
+
+.promos {
+  padding: 6rem 2rem;
 }
 
 /** About Page **/
@@ -231,6 +240,42 @@ nav.navbar {
 .structure .card .gold:hover {
   background: #e9af4f;
   opacity: 0.9;
+}
+
+/** Solutions **/
+.solutions .livicon-evo-holder .lievo-svg-wrapper {
+  display: inline-block;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  padding-bottom: 100% !important;
+  vertical-align: middle;
+  overflow: hidden !important;
+}
+.solutions .livicon-evo-holder svg {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+.services .container {
+  max-width: 60rem;
+  padding: 4rem;
+}
+
+.services .card-img-overlay {
+  display: none;
+}
+
+/** Work **/
+
+.work .container {
+  max-width: 90rem;
+  padding: 4rem;
 }
 
 /** Contact Form **/

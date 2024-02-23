@@ -15,15 +15,17 @@
 			<div class="container text-center">
 				<div class="row  align-items-md-center">
 					<div class="col col-md-5 col-sm-12">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/assets/footer-logo.png" alt="footer logo" />
+						<?php dynamic_sidebar( 'footer_one' ); ?>
 					</div>
-					<div class="col col-md-2 col-sm-12">David@TheDefiningPoint.com 
-404-354-8241</div>
-					<div class="col col-md-5 col-sm-12">bacon</div>
+					<div class="col col-md-2 col-sm-12">
+						<?php dynamic_sidebar( 'footer_two' ); ?></div>
+					<div class="col col-md-5 col-sm-12">
+						<?php dynamic_sidebar( 'footer_three' ); ?>
+					</div>
 				</div>
 				<div class="row">
 					<div class="col col-12 site-info">
-						©2023 The Defining Point. All Rights Reserved.
+						<?php dynamic_sidebar( 'footer_copyright' ); ?>
 					</div>
 				</div>
 			</div>
