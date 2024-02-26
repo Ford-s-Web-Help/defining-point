@@ -44,8 +44,8 @@ get_header();
 				$why = get_field('why_us');
 				if( $why ): ?>
 					<div class="order-1 order-md-0 col-12 col-md-7">
-					<h2><?php echo $why['why_title']; ?></h2>
-						<p><?php echo $why['why_info']; ?></p>
+						<h2 class="text-md-end"><?php echo $why['why_title']; ?></h2>
+						<p class="text-md-end"><?php echo $why['why_info']; ?></p>
 					</div>
 					<div class="order-0 order-md-1 col-12 col-md-5 text-center">
 						<img src="<?php echo esc_url( $why['why_image']['url'] ); ?>" alt="<?php echo esc_attr( $why['why_image']['alt'] ); ?>" class="img-fluid" />

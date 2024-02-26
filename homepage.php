@@ -27,14 +27,14 @@ get_header();
 					));
 
 					if( $posts ): ?>
-						
+					<?php $i=0;?>
 							<div class="carousel-inner">
 							<?php foreach( $posts as $post ): 
 								
 								setup_postdata( $post );
 								
 								?>
-								<div class="carousel-item active">
+								<div class="carousel-item <?php echo ($i==0)?'active 2':''; ?>">
 									<div class="slide-overlay">
 									</div>
 									<img src="<?php the_field('slide_image'); ?>" class="d-block w-100 img-fluid" alt="<?php the_field('slide_title'); ?>">
@@ -62,7 +62,10 @@ get_header();
 				<div class="row">
 					<div class="col-12 text-center">
 						<?php while ( have_posts() ) : the_post(); ?>
-							<h2><?php the_field('tagline'); ?></h2>
+							<h2>
+							Let's Create something
+							<span class="tlt animate-def" data-in-effect="fadeIn" data-in-shuffle="true" data-out-effect="fadeOut" data-out-shuffle="true" data-loop="true"><span style="visibility: hidden;" aria-label="defining"><span class="word1" aria-hidden="true" aria-label="defining" style="display: inline-block; transform: translate3d(0px, 0px, 0px);"><span class="char1" aria-hidden="true" style="display: inline-block; visibility: visible;">d</span><span class="char2" aria-hidden="true" style="display: inline-block; visibility: visible;">e</span><span class="char3" aria-hidden="true" style="display: inline-block; visibility: visible;">f</span><span class="char4" aria-hidden="true" style="display: inline-block; visibility: visible;">i</span><span class="char5" aria-hidden="true" style="display: inline-block; visibility: visible;">n</span><span class="char6" aria-hidden="true" style="display: inline-block; visibility: visible;">i</span><span class="char7" aria-hidden="true" style="display: inline-block; visibility: visible;">n</span><span class="char8" aria-hidden="true" style="display: inline-block; visibility: visible;">g</span></span> </span><ul class="texts" style="display: none;"><li class="current">defining</li></ul></span>
+						</h2>
 						<?php endwhile; // end of the loop. ?>
 					</div>
 				</div>
@@ -79,7 +82,9 @@ get_header();
 				<div class="row">
 					<div class="col-12 text-center">
 					<?php while ( have_posts() ) : the_post(); ?>
-						<a class="sizzle-reel" href="<?php the_field('sizzle_reel'); ?>" target="_blank" title="Watch Our Sizzle Reel">Watch Our Sizzle Reel</a>
+						<a class="sizzle-reel" href="<?php the_field('sizzle_reel'); ?>" target="_blank" title="Watch Our Sizzle Reel">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/sizzle-reel.jpg" alt="Sizzle Reel Image" />
+					</a>
 					<?php endwhile; // end of the loop. ?>
 					</div>
 				</div>
