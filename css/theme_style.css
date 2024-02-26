@@ -2,6 +2,7 @@
 /*******************
 Custome Theme Styles
 ********************/
+a,
 a:visited,
 a:active {
   color: #000;
@@ -56,12 +57,16 @@ nav.navbar {
 }
 
 #primary-menu.navbar-nav li a {
-  font-size: 1.5281em;
+  font-size: 1.525em;
   color: #4d3c38;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   text-decoration: none;
   padding: 0.5em;
+}
+
+#primary-menu.navbar-nav li a:hover {
+  border-bottom: 2px solid #4d3c38;
 }
 
 /******** 
@@ -171,6 +176,10 @@ nav.navbar {
   text-transform: uppercase;
 }
 
+.solutions .btn-outline-secondary:hover {
+  background-color: #4d3c38;
+}
+
 /******** 
   Promos 
 ********/
@@ -187,6 +196,11 @@ nav.navbar {
 
 .abt-grey {
   background-color: #f9f9f9;
+}
+
+.about p {
+  max-width: 35rem;
+  padding: 2rem 0;
 }
 
 .structure {
@@ -279,6 +293,15 @@ nav.navbar {
 }
 
 /** Contact Form **/
+.contact h2 {
+  font-size: 1.2169em;
+  padding: 1rem 0;
+}
+
+.contact h3 {
+  font-size: 3.0081em;
+}
+
 .contact-info {
   padding: 0 4rem;
 }
@@ -294,6 +317,10 @@ nav.navbar {
   padding: 4rem;
   margin: 0 !important;
   border: 0.01rem solid #54403c;
+}
+
+div.wpforms-container-full input {
+  background: #f9f9f9;
 }
 
 /** Footer **/
