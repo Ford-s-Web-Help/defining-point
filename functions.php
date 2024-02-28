@@ -144,10 +144,16 @@ function the_defining_point_scripts() {
 
 	wp_enqueue_script( 'the-defining-point-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
+	// Theme Scripts
+	wp_enqueue_script( 'theme-jquery' , get_template_directory_uri() . '/js/jquery.js', array('jquery') );
+	wp_enqueue_script( 'theme-js' , get_template_directory_uri() . '/js/scripts.js', array('jquery') );
+	// End Theme Scripts
+
 	// Adding Bootstrap to the Theme - Start
 
 	wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css' );
 	wp_enqueue_script( 'bootstrap-js' , get_template_directory_uri() . '/bootstrap/js/bootstrap.bundle.min.js', array('jquery') );
+	
 
 	// Adding Bootstrap to the Theme - Start
 

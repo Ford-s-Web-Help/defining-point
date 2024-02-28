@@ -18,7 +18,7 @@ get_header();
 	<main id="primary" class="site-main">
 		<div class="slideshow">
 			<div class="container-fluid">
-				<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+				<div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
 				<?php 
 
 					$posts = get_posts(array(
@@ -27,14 +27,13 @@ get_header();
 					));
 
 					if( $posts ): ?>
-					<?php $i=0;?>
 							<div class="carousel-inner">
 							<?php foreach( $posts as $post ): 
 								
 								setup_postdata( $post );
 								
 								?>
-								<div class="carousel-item <?php echo ($i==0)?'active 2':''; ?>">
+								<div class="carousel-item">
 									<div class="slide-overlay">
 									</div>
 									<img src="<?php the_field('slide_image'); ?>" class="d-block w-100 img-fluid" alt="<?php the_field('slide_title'); ?>">
@@ -78,11 +77,19 @@ get_header();
 						<h3>Watch Our</h3>
 						<h4>Sizzle Reel</h4>
 					</div>
+					<div class="col-12 text-center">
+						<div class="down-icon">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/sizzle-icon.png" alt="Down Arrow" />
+						</div>
+					</div>
 				</div>
 				<div class="row">
 					<div class="col-12 text-center">
-					<?php while ( have_posts() ) : the_post(); ?>
-						<a class="sizzle-reel" href="<?php the_field('sizzle_reel'); ?>" target="_blank" title="Watch Our Sizzle Reel">
+					<?php
+					 $sizzleReel_Url = get_field( "sizzle_reel", 7 ); 
+					
+					while ( have_posts() ) : the_post(); ?>
+						<a class="sizzle-reel" href="<?php echo $sizzleReel_Url; ?>" target="_blank" title="Watch Our Sizzle Reel">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/sizzle-reel.jpg" alt="Sizzle Reel Image" />
 					</a>
 					<?php endwhile; // end of the loop. ?>
@@ -269,14 +276,18 @@ get_header();
 						<div class="row">
 							<div class="col-12">
 							 <div class="promos-container">
-								<div class="promo-title">
-									<?php the_field('promo_title'); ?>
-								</div>
-								<div class="promo-subtitle">
-									<?php the_field('promo_subtitle'); ?>
-								</div>
-								<div class="promo-btn">
-									<button class="btn btn-outline-light" href="<?php the_field('promo_link'); ?>" role="button"><?php the_field('promo_link_text'); ?></button>
+								<div class="row">
+									<div class="promo-box">
+										<h3 class="promo-title">
+											<?php the_field('promo_title'); ?>
+										</h3>
+										<h4 class="promo-subtitle">
+											<?php the_field('promo_subtitle'); ?>
+										</h4>
+									</div>
+									<div class="promo-btn">
+										<button class="btn btn btn-outline-secondary" href="<?php the_field('promo_link'); ?>" role="button"><?php the_field('promo_link_text'); ?></button>
+									</div>
 								</div>
 							</div>
 							</div>

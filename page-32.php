@@ -83,7 +83,7 @@ get_header();
 							?>
 							<div class="card">
 								<img src="<?php echo esc_url( $structure_one_image['url'] ); ?>" alt="<?php echo esc_attr( $structure_one_image['alt'] ); ?>" class="card-img" />
-								<div class="card-img-overlay red">
+								<div class="card-img-overlay structure-info red">
 									<?php echo '<h2 class="card-title">'.$structure_one_title.'</h2>'; ?>
 									<?php echo '<p class="card-text">'.$structure_one_body.'</p>'; ?>
 								</div>
@@ -105,7 +105,7 @@ get_header();
 							?>
 							<div class="card">
 								<img src="<?php echo esc_url( $structure_two_image['url'] ); ?>" alt="<?php echo esc_attr( $structure_two_image['alt'] ); ?>" class="card-img" />
-								<div class="card-img-overlay blue">
+								<div class="card-img-overlay structure-info blue">
 									<?php echo '<h2 class="card-title">'.$structure_two_title.'</h2>'; ?>
 									<?php echo '<p class="card-text">'.$structure_two_body.'</p>'; ?>
 								</div>
@@ -127,7 +127,7 @@ get_header();
 							?>
 							<div class="card">
 								<img src="<?php echo esc_url( $structure_three_image['url'] ); ?>" alt="<?php echo esc_attr( $structure_three_image['alt'] ); ?>" class="card-img" />
-								<div class="card-img-overlay green">
+								<div class="card-img-overlay structure-info green">
 									<?php echo '<h2 class="card-title">'.$structure_three_title.'</h2>'; ?>
 									<?php echo '<p class="card-text">'.$structure_three_body.'</p>'; ?>
 								</div>
@@ -149,7 +149,7 @@ get_header();
 							?>
 							<div class="card">
 								<img src="<?php echo esc_url( $structure_four_image['url'] ); ?>" alt="<?php echo esc_attr( $structure_four_image['alt'] ); ?>" class="card-img" />
-								<div class="card-img-overlay gold">
+								<div class="card-img-overlay structure-info gold">
 									<?php echo '<h2 class="card-title">'.$structure_four_title.'</h2>'; ?>
 									<?php echo '<p class="card-text">'.$structure_four_body.'</p>'; ?>
 								</div>

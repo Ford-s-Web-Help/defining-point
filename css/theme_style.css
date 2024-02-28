@@ -52,6 +52,11 @@ nav.navbar {
   padding: 50px 5px;
 }
 
+nav.navbar .navbar-toggler {
+  color: #fff;
+  background: #4d3c38;
+}
+
 .menu-menu-1-container {
   margin: 0 3rem 0 0;
 }
@@ -104,22 +109,11 @@ nav.navbar {
   margin-bottom: 2rem;
 }
 
-/* @keyframes growText {
-  from {
-    font-size: 1.5em;
-  }
-  to {
-    font-size: 2em;
-  }
-} */
-
 /* The element to apply the animation to */
 .intro h2 span {
   width: 6.25rem;
   height: 6.25rem;
   font-size: 1em;
-  animation-name: growText;
-  animation-duration: 3s;
 }
 
 /************ 
@@ -133,6 +127,20 @@ nav.navbar {
 .carousel-control-next:not(:disabled),
 .carousel-control-prev:not(:disabled) {
   cursor: url('../img/tdplogo-cursor.png'), auto;
+}
+
+.slideshow .slide-overlay {
+  background: rgba(58, 86, 165, 0.5);
+  position: absolute;
+  height: 100%;
+  width: 50%;
+}
+
+/*********** 
+  Sizzle Reel
+***********/
+.sizzle .down-icon {
+  margin: 1rem 0 2rem 0;
 }
 
 /*********** 
@@ -185,7 +193,35 @@ nav.navbar {
 ********/
 
 .promos {
+  color: #fff;
   padding: 6rem 2rem;
+}
+
+.promos h3 {
+  font-size: 1.2169em;
+  padding: 1rem 0;
+}
+
+.promos h4 {
+  font-size: 3.0081em;
+}
+
+.promo-box {
+  margin-bottom: 2rem;
+}
+
+.promos .btn-outline-secondary {
+  border-radius: 0;
+  border-color: #fff;
+  color: #fff;
+  max-width: 15rem;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+}
+
+.promos .btn-outline-secondary:hover {
+  background-color: #4d3c38;
 }
 
 /** About Page **/
@@ -228,15 +264,21 @@ nav.navbar {
   font-size: 0.8em;
 }
 
-.structure .card .card-img-overlay {
+.structure .structure-info {
+  padding: 2rem 1rem;
+}
+
+.structure .structure-info .card-title,
+.structure .structure-info .card-text {
   display: none;
 }
 
-.structure .card:hover + .card-img-overlay {
+.structure .structure-info:hover .card-title,
+.structure .structure-info:hover .card-text {
   display: block;
 }
 
-.structure .card:hover + .red:hover {
+.structure .card .red:hover {
   background: #f1392d;
   opacity: 0.9;
 }
@@ -337,4 +379,19 @@ footer a {
 footer .site-info {
   font-size: 0.8331em;
   padding: 2rem;
+}
+
+/***************
+Media Queries
+***************/
+@media only screen and (max-width: 600px) {
+  #svg-logo {
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: 100px;
+    width: 155px;
+    z-index: 9999;
+    margin-left: 8rem;
+  }
 }
