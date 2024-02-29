@@ -13,13 +13,14 @@
 
 	<footer id="colophon" class="site-footer">
 			<div class="container text-center">
-				<div class="row  align-items-md-center">
-					<div class="col col-md-5 col-sm-12">
+				<div class="row align-items-center">
+					<div class="col-sm-12 col-md-4">
 						<?php dynamic_sidebar( 'footer_one' ); ?>
 					</div>
-					<div class="col col-md-2 col-sm-12">
-						<?php dynamic_sidebar( 'footer_two' ); ?></div>
-					<div class="col col-md-5 col-sm-12">
+					<div class="col-sm-12 col-md-4 info">
+						<?php dynamic_sidebar( 'footer_two' ); ?>
+					</div>
+					<div class="col-sm-12 col-md-4 text-center">
 						<?php dynamic_sidebar( 'footer_three' ); ?>
 					</div>
 				</div>
