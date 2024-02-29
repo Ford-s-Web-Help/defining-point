@@ -133,7 +133,7 @@ nav.navbar .navbar-toggler {
   background: rgba(58, 86, 165, 0.5);
   position: absolute;
   height: 100%;
-  width: 50%;
+  width: 70%;
 }
 
 /*********** 
@@ -376,6 +376,43 @@ footer a {
   text-decoration: none;
 }
 
+footer .info p {
+  margin-bottom: 0.3rem;
+}
+
+footer .footer-icons {
+  display: inline-flex;
+  margin-left: 0;
+}
+
+footer .footer-icons .list-group-item {
+  background: none;
+  border: none;
+  padding: 0.5rem 0.25rem;
+  text-indent: -9999px;
+}
+
+footer .footer-icons .list-group-item.instagram a {
+  background: url('../img/instagram.png') no-repeat center;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+}
+
+footer .footer-icons .list-group-item.linkedin a {
+  background: url('../img/linkedin.png') no-repeat center;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+}
+
+footer .footer-icons .list-group-item.vimeo a {
+  background: url('../img/vimeo.png') no-repeat center;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+}
+
 footer .site-info {
   font-size: 0.8331em;
   padding: 2rem;
@@ -393,5 +430,10 @@ Media Queries
     width: 155px;
     z-index: 9999;
     margin-left: 8rem;
+  }
+
+  footer .footer-icons {
+    display: inline-flex;
+    margin-left: 0;
   }
 }

@@ -60,12 +60,26 @@ get_header();
 			<div class="container">
 				<div class="row">
 					<div class="col-12 text-center">
-						<?php while ( have_posts() ) : the_post(); ?>
 							<h2>
 							Let's Create something
-							<span class="tlt animate-def" data-in-effect="fadeIn" data-in-shuffle="true" data-out-effect="fadeOut" data-out-shuffle="true" data-loop="true"><span style="visibility: hidden;" aria-label="defining"><span class="word1" aria-hidden="true" aria-label="defining" style="display: inline-block; transform: translate3d(0px, 0px, 0px);"><span class="char1" aria-hidden="true" style="display: inline-block; visibility: visible;">d</span><span class="char2" aria-hidden="true" style="display: inline-block; visibility: visible;">e</span><span class="char3" aria-hidden="true" style="display: inline-block; visibility: visible;">f</span><span class="char4" aria-hidden="true" style="display: inline-block; visibility: visible;">i</span><span class="char5" aria-hidden="true" style="display: inline-block; visibility: visible;">n</span><span class="char6" aria-hidden="true" style="display: inline-block; visibility: visible;">i</span><span class="char7" aria-hidden="true" style="display: inline-block; visibility: visible;">n</span><span class="char8" aria-hidden="true" style="display: inline-block; visibility: visible;">g</span></span> </span><ul class="texts" style="display: none;"><li class="current">defining</li></ul></span>
+							<span class="tlt animate-def" data-in-effect="fadeIn" data-in-shuffle="true" data-out-effect="fadeOut" data-out-shuffle="true" data-loop="true">
+								<span style="visibility: hidden;" aria-label="defining">
+									<span class="word1" aria-hidden="true" aria-label="defining" style="display: inline-block; transform: translate3d(0px, 0px, 0px);">
+										<span class="char1" aria-hidden="true" style="display: inline-block; visibility: visible;">d</span>
+										<span class="char2" aria-hidden="true" style="display: inline-block; visibility: visible;">e</span>
+										<span class="char3" aria-hidden="true" style="display: inline-block; visibility: visible;">f</span>
+										<span class="char4" aria-hidden="true" style="display: inline-block; visibility: visible;">i</span>
+										<span class="char5" aria-hidden="true" style="display: inline-block; visibility: visible;">n</span>
+										<span class="char6" aria-hidden="true" style="display: inline-block; visibility: visible;">i</span>
+										<span class="char7" aria-hidden="true" style="display: inline-block; visibility: visible;">n</span>
+										<span class="char8" aria-hidden="true" style="display: inline-block; visibility: visible;">g</span>
+									</span> 
+								</span>
+							<ul class="texts" style="display: none;">
+								<li class="current">defining</li>
+							</ul>
+							</span>
 						</h2>
-						<?php endwhile; // end of the loop. ?>
 					</div>
 				</div>
 			</div>
