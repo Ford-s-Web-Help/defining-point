@@ -9,7 +9,7 @@
       selector: '.texts',
 
       // enable looping
-      loop: false,
+      loop: true,
 
       // sets the minimum display time for each text before it is replaced
       minDisplayTime: 2000,
@@ -38,18 +38,18 @@
         delayScale: 1.5,
 
         // set the delay between each character
-        delay: 50,
+        delay: 40,
 
         // set to true to animate all the characters at the same time
         sync: false,
 
         // randomize the character sequence
         // (note that shuffle doesn't make sense with sync = true)
-        shuffle: false,
+        shuffle: true,
 
         // reverse the character sequence
         // (note that reverse doesn't make sense with sync = true)
-        reverse: false,
+        reverse: true,
 
         // callback that executes once the animation has finished
         callback: function () {},
@@ -58,11 +58,12 @@
       // out animation settings.
       out: {
         effect: 'hinge',
+        loop: true,
         delayScale: 1.5,
-        delay: 50,
+        delay: 40,
         sync: false,
-        shuffle: false,
-        reverse: false,
+        shuffle: true,
+        reverse: true,
         callback: function () {},
       },
 

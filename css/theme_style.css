@@ -106,14 +106,12 @@ nav.navbar .navbar-toggler {
 }
 
 .box-title {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 /* The element to apply the animation to */
 .intro h2 span {
-  width: 6.25rem;
-  height: 6.25rem;
-  font-size: 1em;
+  font-size: 5rem;
 }
 
 /************ 
@@ -194,7 +192,7 @@ nav.navbar .navbar-toggler {
 
 .promos {
   color: #fff;
-  padding: 6rem 2rem;
+  padding: 2rem;
 }
 
 .promos h3 {
@@ -234,8 +232,11 @@ nav.navbar .navbar-toggler {
   background-color: #f9f9f9;
 }
 
+.about .about-container {
+  max-width: 80rem;
+}
+
 .about p {
-  max-width: 35rem;
   padding: 2rem 0;
 }
 
@@ -430,6 +431,24 @@ Media Queries
     width: 155px;
     z-index: 9999;
     margin-left: 8rem;
+  }
+
+  .navbar-nav {
+    margin: 0;
+  }
+
+  .box {
+    padding: 2rem;
+    margin: 2rem;
+  }
+
+  .intro h2 span {
+    font-size: 3.5rem;
+  }
+
+  .solutions .card-img-container {
+    max-width: 10rem;
+    margin: 0 auto;
   }
 
   footer .footer-icons {
