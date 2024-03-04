@@ -63,18 +63,6 @@ get_header();
 							<h2>
 							Let's Create something
 							<span class="tlt animate-def" data-in-effect="fadeIn" data-in-shuffle="true" data-out-effect="fadeOut" data-out-shuffle="true" data-loop="true">
-								<span style="visibility: hidden;" aria-label="defining">
-									<span class="word1" aria-hidden="true" aria-label="defining" style="display: inline-block; transform: translate3d(0px, 0px, 0px);">
-										<span class="char1" aria-hidden="true" style="display: inline-block; visibility: visible;">d</span>
-										<span class="char2" aria-hidden="true" style="display: inline-block; visibility: visible;">e</span>
-										<span class="char3" aria-hidden="true" style="display: inline-block; visibility: visible;">f</span>
-										<span class="char4" aria-hidden="true" style="display: inline-block; visibility: visible;">i</span>
-										<span class="char5" aria-hidden="true" style="display: inline-block; visibility: visible;">n</span>
-										<span class="char6" aria-hidden="true" style="display: inline-block; visibility: visible;">i</span>
-										<span class="char7" aria-hidden="true" style="display: inline-block; visibility: visible;">n</span>
-										<span class="char8" aria-hidden="true" style="display: inline-block; visibility: visible;">g</span>
-									</span> 
-								</span>
 							<ul class="texts" style="display: none;">
 								<li class="current">defining</li>
 							</ul>
@@ -250,9 +238,10 @@ get_header();
 	
 <desc>LivIcons Evolution</desc></svg></div></div></div>
 														<?php elseif($solutionClass === 'camera'): ?>
+															<img src="<?php echo get_template_directory_uri(); ?>/img/broadcast.svg" alt="Broadcast Icon" />		
 													<?php endif; ?>
 												</div>
-												<div class="card-body text-start align-text-bottom col-12 col-md-8">
+												<div class="card-body text-center text-md-start align-text-bottom col-12 col-md-8">
 													<h5 class="card-title"><?php the_title(''); ?></h5>
 													<p class="card-text"><?php the_field('solution_summary'); ?></p>
 												</div>
@@ -263,7 +252,7 @@ get_header();
 							<?php endforeach; ?>
 							</div>
 							<div class="row">
-								<button class="btn btn btn-outline-secondary">Explore Our Services</button>
+								<a class="btn btn btn-outline-secondary" href="/services">Explore Our Services</a>
 							</div>
 						</div>
 						

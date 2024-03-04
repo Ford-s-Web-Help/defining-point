@@ -4,7 +4,8 @@ Custome Theme Styles
 ********************/
 a,
 a:visited,
-a:active {
+a:active,
+a:hover {
   color: #000;
   text-decoration: none;
 }
@@ -106,14 +107,12 @@ nav.navbar .navbar-toggler {
 }
 
 .box-title {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 /* The element to apply the animation to */
 .intro h2 span {
-  width: 6.25rem;
-  height: 6.25rem;
-  font-size: 1em;
+  font-size: 5rem;
 }
 
 /************ 
@@ -194,7 +193,7 @@ nav.navbar .navbar-toggler {
 
 .promos {
   color: #fff;
-  padding: 6rem 2rem;
+  padding: 2rem;
 }
 
 .promos h3 {
@@ -234,8 +233,11 @@ nav.navbar .navbar-toggler {
   background-color: #f9f9f9;
 }
 
+.about .about-container {
+  max-width: 80rem;
+}
+
 .about p {
-  max-width: 35rem;
   padding: 2rem 0;
 }
 
@@ -318,13 +320,43 @@ nav.navbar .navbar-toggler {
   width: 100% !important;
   height: 100% !important;
 }
+
+/** Services Page **/
 .services .container {
   max-width: 60rem;
   padding: 4rem;
 }
 
+.services .card {
+  border: none;
+}
+
 .services .card-img-overlay {
   display: none;
+}
+
+.services .service.creative {
+  animation: fadeInUpBig; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+  animate-delay: 1s; /* don't forget to set a duration! */
+}
+
+.services .service.events {
+  animation: fadeInUpBig; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 3s; /* don't forget to set a duration! */
+  animate-delay: 2s; /* don't forget to set a duration! */
+}
+
+.services .service.broadcast {
+  animation: fadeInUpBig; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 4s; /* don't forget to set a duration! */
+  animate-delay: 4s; /* don't forget to set a duration! */
+}
+
+.services .service.technology {
+  animation: fadeInUpBig; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 5s; /* don't forget to set a duration! */
+  animate-delay: 6s; /* don't forget to set a duration! */
 }
 
 /** Work **/
@@ -430,6 +462,24 @@ Media Queries
     width: 155px;
     z-index: 9999;
     margin-left: 8rem;
+  }
+
+  .navbar-nav {
+    margin: 0;
+  }
+
+  .box {
+    padding: 2rem;
+    margin: 2rem;
+  }
+
+  .intro h2 span {
+    font-size: 3.5rem;
+  }
+
+  .solutions .card-img-container {
+    max-width: 10rem;
+    margin: 0 auto;
   }
 
   footer .footer-icons {

@@ -9,10 +9,10 @@
       selector: '.texts',
 
       // enable looping
-      loop: false,
+      loop: true,
 
       // sets the minimum display time for each text before it is replaced
-      minDisplayTime: 2000,
+      minDisplayTime: 4000,
 
       // sets the initial delay before starting the animation
       // (note that depending on the in effect you may need to manually apply
@@ -27,25 +27,25 @@
       inEffects: [],
 
       // custom set of 'out' effects
-      outEffects: ['hinge'],
+      outEffects: ['fadeOut'],
 
       // in animation settings
       in: {
         // set the effect name
-        effect: 'fadeInLeftBig',
+        effect: 'fadeIn',
 
         // set the delay factor applied to each consecutive character
         delayScale: 1.5,
 
         // set the delay between each character
-        delay: 50,
+        delay: 40,
 
         // set to true to animate all the characters at the same time
         sync: false,
 
         // randomize the character sequence
         // (note that shuffle doesn't make sense with sync = true)
-        shuffle: false,
+        shuffle: true,
 
         // reverse the character sequence
         // (note that reverse doesn't make sense with sync = true)
@@ -57,17 +57,14 @@
 
       // out animation settings.
       out: {
-        effect: 'hinge',
+        effect: 'fadeOut',
         delayScale: 1.5,
-        delay: 50,
+        delay: 40,
         sync: false,
-        shuffle: false,
-        reverse: false,
+        shuffle: true,
+        reverse: true,
         callback: function () {},
       },
-
-      // callback that executes once textillate has finished
-      callback: function () {},
 
       // set the type of token to animate (available types: 'char' and 'word')
       type: 'char',

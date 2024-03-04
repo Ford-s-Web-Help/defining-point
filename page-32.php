@@ -27,43 +27,55 @@ get_header();
 		</div>
 		<div class="container-fluid about">
 			<div class="row justify-content-evenly">
+				<div class="container about-container">
+					<div class="row">
 					<?php
-					$who = get_field('who_we_are');
-					if( $who ): ?>
-						<div class="order-0 col-12 col-md-5 text-center">
-						<img src="<?php echo esc_url( $who['who_image']['url'] ); ?>" alt="<?php echo esc_attr( $who['who_image']['alt'] ); ?>" class="img-fluid" />
-						</div>
-						<div class="order-1 col-12 col-md-7">
-							<h2><?php echo $who['who_title']; ?></h2>
-							<p><?php echo $who['who_info']; ?></p>
-						</div>
-					<?php endif; ?>
+						$who = get_field('who_we_are');
+						if( $who ): ?>
+							<div class="order-0 col-12 col-md-5 text-center">
+							<img src="<?php echo esc_url( $who['who_image']['url'] ); ?>" alt="<?php echo esc_attr( $who['who_image']['alt'] ); ?>" class="img-fluid" />
+							</div>
+							<div class="order-1 col-12 col-md-7">
+								<h2><?php echo $who['who_title']; ?></h2>
+								<p><?php echo $who['who_info']; ?></p>
+							</div>
+						<?php endif; ?>
+					</div>
+				</div>	
 			</div>
 			<div class="row justify-content-evenly abt-grey">
+			<div class="container about-container">
+				<div class="row text-end">
 				<?php
 				$why = get_field('why_us');
 				if( $why ): ?>
 					<div class="order-1 order-md-0 col-12 col-md-7">
-						<h2 class="text-md-end"><?php echo $why['why_title']; ?></h2>
-						<p class="text-md-end"><?php echo $why['why_info']; ?></p>
+						<h2><?php echo $why['why_title']; ?></h2>
+						<p><?php echo $why['why_info']; ?></p>
 					</div>
 					<div class="order-0 order-md-1 col-12 col-md-5 text-center">
 						<img src="<?php echo esc_url( $why['why_image']['url'] ); ?>" alt="<?php echo esc_attr( $why['why_image']['alt'] ); ?>" class="img-fluid" />
 					</div>
 				<?php endif; ?>
+					</div>
+				</div>
 			</div>
 			<div class="row justify-content-evenly">
-				<?php
-				$how = get_field('how_we_are_different');
-				if( $how ): ?>
-					<div class="order-0 col-12 col-md-5 text-center">
-						<img src="<?php echo esc_url( $how['how_image']['url'] ); ?>" alt="<?php echo esc_attr( $how['how_image']['alt'] ); ?>" class="img-fluid" />
+				<div class="container about-container">
+					<div class="row">
+					<?php
+					$how = get_field('how_we_are_different');
+					if( $how ): ?>
+						<div class="order-0 col-12 col-md-5 text-center">
+							<img src="<?php echo esc_url( $how['how_image']['url'] ); ?>" alt="<?php echo esc_attr( $how['how_image']['alt'] ); ?>" class="img-fluid" />
+						</div>
+						<div class="order-1 col-12 col-md-7">
+							<h2><?php echo $how['how_title']; ?></h2>
+							<p><?php echo $how['how_info']; ?></p>
+						</div>
+					<?php endif; ?>
 					</div>
-					<div class="order-1 col-12 col-md-7">
-						<h2><?php echo $how['how_title']; ?></h2>
-						<p><?php echo $how['how_info']; ?></p>
-					</div>
-				<?php endif; ?>
+				</div>
 			</div>
 		</div>
 		<div class="container-fluid">
@@ -83,7 +95,7 @@ get_header();
 							?>
 							<div class="card">
 								<img src="<?php echo esc_url( $structure_one_image['url'] ); ?>" alt="<?php echo esc_attr( $structure_one_image['alt'] ); ?>" class="card-img" />
-								<div class="card-img-overlay structure-info red">
+								<div class="card-img-overlay structure-info red text-start">
 									<?php echo '<h2 class="card-title">'.$structure_one_title.'</h2>'; ?>
 									<?php echo '<p class="card-text">'.$structure_one_body.'</p>'; ?>
 								</div>
@@ -105,7 +117,7 @@ get_header();
 							?>
 							<div class="card">
 								<img src="<?php echo esc_url( $structure_two_image['url'] ); ?>" alt="<?php echo esc_attr( $structure_two_image['alt'] ); ?>" class="card-img" />
-								<div class="card-img-overlay structure-info blue">
+								<div class="card-img-overlay structure-info blue text-start">
 									<?php echo '<h2 class="card-title">'.$structure_two_title.'</h2>'; ?>
 									<?php echo '<p class="card-text">'.$structure_two_body.'</p>'; ?>
 								</div>
@@ -127,7 +139,7 @@ get_header();
 							?>
 							<div class="card">
 								<img src="<?php echo esc_url( $structure_three_image['url'] ); ?>" alt="<?php echo esc_attr( $structure_three_image['alt'] ); ?>" class="card-img" />
-								<div class="card-img-overlay structure-info green">
+								<div class="card-img-overlay structure-info green text-start">
 									<?php echo '<h2 class="card-title">'.$structure_three_title.'</h2>'; ?>
 									<?php echo '<p class="card-text">'.$structure_three_body.'</p>'; ?>
 								</div>
@@ -149,7 +161,7 @@ get_header();
 							?>
 							<div class="card">
 								<img src="<?php echo esc_url( $structure_four_image['url'] ); ?>" alt="<?php echo esc_attr( $structure_four_image['alt'] ); ?>" class="card-img" />
-								<div class="card-img-overlay structure-info gold">
+								<div class="card-img-overlay structure-info gold text-start">
 									<?php echo '<h2 class="card-title">'.$structure_four_title.'</h2>'; ?>
 									<?php echo '<p class="card-text">'.$structure_four_body.'</p>'; ?>
 								</div>

@@ -145,7 +145,7 @@ function the_defining_point_scripts() {
 	wp_enqueue_script( 'the-defining-point-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	// Theme Scripts
-	wp_enqueue_script( 'theme-jquery' , get_template_directory_uri() . '/js/jquery.js', array('jquery') );
+	wp_enqueue_script( 'theme-jquery' , get_template_directory_uri() . '/js/jquery_10.js', array('jquery') );
 	wp_enqueue_script( 'theme-js' , get_template_directory_uri() . '/js/scripts.js', array('jquery') );
 	// End Theme Scripts
 
@@ -155,6 +155,7 @@ function the_defining_point_scripts() {
 	wp_enqueue_script( 'bootstrap-js' , get_template_directory_uri() . '/bootstrap/js/bootstrap.bundle.min.js', array('jquery') );
 	
 	// Lettering Animate Scripts - Start
+	wp_enqueue_script( 'fittext-js' , get_template_directory_uri() . '/js/textillate/assets/jquery.jquery.fittext.js', array('jquery') );
 	wp_enqueue_script( 'lettering-js' , get_template_directory_uri() . '/js/textillate/assets/jquery.lettering.js', array('jquery') );
 	wp_enqueue_script( 'textillate-js' , get_template_directory_uri() . '/js/textillate/jquery.textillate.js', array('jquery') );
 	// End Lettering Animate Scripts
@@ -162,7 +163,7 @@ function the_defining_point_scripts() {
 	// Adding Bootstrap to the Theme - Start
 
 	// Theme CSS
-	wp_enqueue_style( 'animate.css' , get_template_directory_uri() . '/js/textillate/assets/style.css', array('jquery') );
+	wp_enqueue_style( 'theme-animate' , 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
 	wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/css/theme_style.css' );
 	wp_enqueue_style( 'logo-css', get_template_directory_uri() . '/css/logo.css' );
 
