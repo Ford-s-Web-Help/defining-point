@@ -252,7 +252,7 @@ get_header();
 							<?php endforeach; ?>
 							</div>
 							<div class="row">
-								<a class="btn btn btn-outline-secondary" href="/solutions">Explore Our Services</a>
+								<a class="btn btn btn-outline-secondary" href="/services">Explore Our Services</a>
 							</div>
 						</div>
 						

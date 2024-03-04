@@ -163,7 +163,7 @@ function the_defining_point_scripts() {
 	// Adding Bootstrap to the Theme - Start
 
 	// Theme CSS
-	wp_enqueue_style( 'animate.css' , get_template_directory_uri() . '/js/textillate/assets/style.css', array('jquery') );
+	wp_enqueue_style( 'theme-animate' , 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
 	wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/css/theme_style.css' );
 	wp_enqueue_style( 'logo-css', get_template_directory_uri() . '/css/logo.css' );
 

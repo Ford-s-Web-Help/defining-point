@@ -4,7 +4,8 @@ Custome Theme Styles
 ********************/
 a,
 a:visited,
-a:active {
+a:active,
+a:hover {
   color: #000;
   text-decoration: none;
 }
@@ -319,13 +320,43 @@ nav.navbar .navbar-toggler {
   width: 100% !important;
   height: 100% !important;
 }
+
+/** Services Page **/
 .services .container {
   max-width: 60rem;
   padding: 4rem;
 }
 
+.services .card {
+  border: none;
+}
+
 .services .card-img-overlay {
   display: none;
+}
+
+.services .service.creative {
+  animation: fadeInUpBig; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+  animate-delay: 1s; /* don't forget to set a duration! */
+}
+
+.services .service.events {
+  animation: fadeInUpBig; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 3s; /* don't forget to set a duration! */
+  animate-delay: 2s; /* don't forget to set a duration! */
+}
+
+.services .service.broadcast {
+  animation: fadeInUpBig; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 4s; /* don't forget to set a duration! */
+  animate-delay: 4s; /* don't forget to set a duration! */
+}
+
+.services .service.technology {
+  animation: fadeInUpBig; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 5s; /* don't forget to set a duration! */
+  animate-delay: 6s; /* don't forget to set a duration! */
 }
 
 /** Work **/
