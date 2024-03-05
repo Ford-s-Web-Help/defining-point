@@ -21,7 +21,7 @@
 						<?php dynamic_sidebar( 'footer_two' ); ?>
 					</div>
 					<div class="col-sm-12 col-md-4 text-center">
-						<?php dynamic_sidebar( 'footer_three' ); ?>
+						<?php dynamic_sidebar( 'footer_Three' ); ?>
 					</div>
 				</div>
 				<div class="row">
