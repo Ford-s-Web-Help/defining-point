@@ -18,15 +18,14 @@ get_header(); ?>
 	<main id="primary" class="site-main">
 		<div class="slideshow">
 			<div class="container-fluid">
-				<div id="carouselExampleControls" style="position:relative; height: auto; width: 100%; background-color: #000;" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
-				<div id="slideWrap">
+				<div id="carouselExampleControls"  class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
 				<?php
     $posts = get_posts([
         "posts_per_page" => 5,
         "post_type" => "slides",
     ]);
     if ($posts): ?>
-				<div class="carousel-inner">
+				<div id="slideWrap" class="carousel-inner">
 					
 					<?php foreach ($posts as $post):
 					    setup_postdata($post);
@@ -53,7 +52,7 @@ get_header(); ?>
 						<span class="carousel-control-next-icon" aria-hidden="true"></span>
 						<span class="visually-hidden">Next</span>
 					</button>
-				</div>
+				
 				<?php wp_reset_postdata(); ?>
 
 			<?php endif; ?>
