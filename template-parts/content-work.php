@@ -11,10 +11,10 @@
 
 <div id="post-<?php the_ID(); ?>" <?php post_class('col-12 col-md-4 work');?>>
 	<div class="card">
-		<img src="<?php the_field('work_image'); ?>" class="card-img" />
+		<img src="<?php echo esc_html_e(get_field('work_image')); ?>" class="card-img" />
 		<div class="card-body">
 			<h5 class="card-title"><?php the_title(); ?></h5>
-			<p class="card-text"><?php the_field('work_body'); ?></p>
+			<p class="card-text"><?php echo esc_html_e(the_field('work_body')); ?></p>
 			<a href="<?php the_permalink(); ?>" class="btn btn-primary">Follow</a>
 		</div>
 	</div>

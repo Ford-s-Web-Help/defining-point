@@ -1,12 +1,18 @@
 (function ($) {
   $(document).ready(function () {
+    const el = document.getElementById("carouselExampleControls");
+
+    $("#slideWrap").mousemove(function (event) {
+      $("#slideOverlay").css("right", el.offsetWidth - event.clientX);
+    });
+
     // Slideshow Active Class
-    $('.slideshow .carousel-item:first-child').addClass('active');
+    $(".slideshow .carousel-item:first-child").addClass("active");
 
     // Enable Text Animation
-    $('.tlt').textillate({
+    $(".tlt").textillate({
       // the default selector to use when detecting multiple texts to animate
-      selector: '.texts',
+      selector: ".texts",
 
       // enable looping
       loop: true,
@@ -27,12 +33,12 @@
       inEffects: [],
 
       // custom set of 'out' effects
-      outEffects: ['fadeOut'],
+      outEffects: ["fadeOut"],
 
       // in animation settings
       in: {
         // set the effect name
-        effect: 'fadeIn',
+        effect: "fadeIn",
 
         // set the delay factor applied to each consecutive character
         delayScale: 1.5,
@@ -57,7 +63,7 @@
 
       // out animation settings.
       out: {
-        effect: 'fadeOut',
+        effect: "fadeOut",
         delayScale: 1.5,
         delay: 40,
         sync: false,
@@ -67,7 +73,7 @@
       },
 
       // set the type of token to animate (available types: 'char' and 'word')
-      type: 'char',
+      type: "char",
     });
   });
 })(jQuery);

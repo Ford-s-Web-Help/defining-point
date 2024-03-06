@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap");
 /*******************
 Custome Theme Styles
 ********************/
@@ -13,7 +13,7 @@ a:hover {
   Typography
 ************/
 body {
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
   font-size: 16px;
 }
 h1 {
@@ -125,15 +125,15 @@ nav.navbar .navbar-toggler {
 .slideshow,
 .carousel-control-next:not(:disabled),
 .carousel-control-prev:not(:disabled) {
-  cursor: url('../img/tdplogo-cursor.png'), auto;
+  cursor: url("../img/tdplogo-cursor.png"), auto;
 }
 
-.slideshow .slide-overlay {
+/* .slideshow .slide-overlay {
   background: rgba(58, 86, 165, 0.5);
   position: absolute;
   height: 100%;
   width: 70%;
-}
+} */
 
 /*********** 
   Sizzle Reel
@@ -425,21 +425,21 @@ footer .footer-icons .list-group-item {
 }
 
 footer .footer-icons .list-group-item.instagram a {
-  background: url('../img/instagram.png') no-repeat center;
+  background: url("../img/instagram.png") no-repeat center;
   display: block;
   width: 2rem;
   height: 2rem;
 }
 
 footer .footer-icons .list-group-item.linkedin a {
-  background: url('../img/linkedin.png') no-repeat center;
+  background: url("../img/linkedin.png") no-repeat center;
   display: block;
   width: 2rem;
   height: 2rem;
 }
 
 footer .footer-icons .list-group-item.vimeo a {
-  background: url('../img/vimeo.png') no-repeat center;
+  background: url("../img/vimeo.png") no-repeat center;
   display: block;
   width: 2rem;
   height: 2rem;

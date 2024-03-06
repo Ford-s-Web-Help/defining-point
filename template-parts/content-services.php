@@ -20,7 +20,7 @@
 
 <div id="post-<?php the_ID(); ?>" <?php post_class($serviceClass);?>>
 	<div class="card">
-		<img src="<?php the_field('service_archive_image'); ?>" class="card-img" />
+		<img src="<?php echo esc_html_e(get_field('service_archive_image')); ?>" class="card-img" />
 		<div class="card-img-overlay">
 			<?php the_title( '<h2 class="card-title">', '</h2>' ); ?>
 		</div>
