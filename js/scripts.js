@@ -1,13 +1,13 @@
 (function ($) {
   $(document).ready(function () {
-    const el = document.getElementById("carouselExampleControls");
+    // Slideshow Active Class
+    $(".slideshow .carousel-item:first-child").addClass("active");
+
+    const el = document.getElementById("slideWrap");
 
     $("#slideWrap").mousemove(function (event) {
       $("#slideOverlay").css("right", el.offsetWidth - event.clientX);
     });
-
-    // Slideshow Active Class
-    $(".slideshow .carousel-item:first-child").addClass("active");
 
     // Enable Text Animation
     $(".tlt").textillate({
