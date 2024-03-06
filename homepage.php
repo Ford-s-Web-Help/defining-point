@@ -40,8 +40,9 @@ get_header(); ?>
 										<img src="<?php echo  esc_html_e($slideImage); ?>" class="d-block w-100 img-fluid" alt="<?php echo  esc_html_e($slideTitle); ?>">
 
 								</div>
-						</div>
+						
 							<?php endforeach; ?>
+					</div>
 							
 
 					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
