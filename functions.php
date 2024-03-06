@@ -161,10 +161,8 @@ function the_defining_point_scripts() {
 	wp_enqueue_script( 'textillate-js' , get_template_directory_uri() . '/js/textillate/jquery.textillate.js', array('jquery') );
 	// End Lettering Animate Scripts
 
-	// Adding Bootstrap to the Theme - Start
-
 	// Theme CSS
-	wp_enqueue_style( 'theme-animate' , 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+	wp_enqueue_style( 'theme-animate' , get_template_directory_uri() . '/js/textillate/assets/animate.css' );
 	wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/css/theme_style.css' );
 	wp_enqueue_style( 'logo-css', get_template_directory_uri() . '/css/logo.css' );
 
