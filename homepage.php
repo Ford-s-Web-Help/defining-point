@@ -18,25 +18,32 @@ get_header(); ?>
 	<main id="primary" class="site-main">
 		<div class="slideshow">
 			<div class="container-fluid">
-				<div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+				<div id="carouselExampleControls" style="position:relative; height: auto; width: 100%; background-color: #000;" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+				<div id="slideWrap">
 				<?php
     $posts = get_posts([
         "posts_per_page" => 5,
         "post_type" => "slides",
     ]);
     if ($posts): ?>
-				<div id="slider" class="carousel-inner">
-				    <div id="slide-overlay" style="position: absolute; background-color: rgba(58, 86, 165, 0.5); top:0; bottom: 0; left:0; right:100px;">
+				<div class="carousel-inner">
+					
 					<?php foreach ($posts as $post):
-					   setup_postdata($post);
+					    setup_postdata($post);
                         $slideImage =get_field("slide_image");
-                        $slideTitle = get_field("slide_title");?>
-								<div style="position:relative; height: auto; width: 100%; background-color: #000;" class="carousel-item">
-									<img src="<?php echo  esc_html_e($slideImage); ?>" class="d-block w-100 img-fluid" alt="<?php echo  esc_html_e($slideTitle); ?>">
-								</div>
+                        $slideTitle = get_field("slide_title");
+					?>
+						
+								<div  class="carousel-item">
 
+										<div id="slideOverlay" style="position: absolute; background-color: rgba(58, 86, 165, 0.5); top:0; bottom: 0; left:0; right:100px;">
+										</div>
+										<img src="<?php echo  esc_html_e($slideImage); ?>" class="d-block w-100 img-fluid" alt="<?php echo  esc_html_e($slideTitle); ?>">
+
+								</div>
+						</div>
 							<?php endforeach; ?>
-							</div>
+							
 
 					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -50,6 +57,7 @@ get_header(); ?>
 				<?php wp_reset_postdata(); ?>
 
 			<?php endif; ?>
+			</div>
 			</div>
 		</div>
 		<div class="box intro">
@@ -264,25 +272,22 @@ get_header(); ?>
   if ($posts): ?>
 					<?php foreach ($posts as $post):
          setup_postdata($post); ?>
-						<div class="promos container-fluid justify-content-around text-center" style="background-image:url('<?php the_field(
-          "promo_image"
-      ); ?>')">
+						<div class="promos container-fluid justify-content-around text-center" style="background-image:url('<?php echo esc_html_e(get_field(
+          "promo_image")); ?>')">
 						<div class="row">
 							<div class="col-12">
 							 <div class="promos-container">
 								<div class="row">
 									<div class="promo-box">
 										<h3 class="promo-title">
-											<?php the_field("promo_title"); ?>
+											<?php echo esc_html_e(get_field("promo_title")); ?>
 										</h3>
 										<h4 class="promo-subtitle">
-											<?php the_field("promo_subtitle"); ?>
+											<?php echo esc_html_e(get_field("promo_subtitle")); ?>
 										</h4>
 									</div>
 									<div class="promo-btn">
-										<button class="btn btn btn-outline-secondary" href="<?php the_field(
-              "promo_link"
-          ); ?>" role="button"><?php the_field("promo_link_text"); ?></button>
+										<a class="btn btn btn-outline-secondary" href="<?php echo esc_html_e(get_field("promo_link")); ?>" role="button"><?php echo esc_html_e(get_field("promo_link_text")); ?></a>
 									</div>
 								</div>
 							</div>

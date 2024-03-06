@@ -29,8 +29,8 @@ get_header();
 		<?php while ( have_posts() ) : the_post(); ?>
 			<div class="row text-center">
 				<div class="col-12">
-					<h2><?php the_field('heading'); ?></h2>
-					<h3><?php the_field('subtitle'); ?></h3>
+					<h2><?php echo esc_html_e(get_field('heading')); ?></h2>
+					<h3><?php echo esc_html_e(get_field('subtitle')); ?></h3>
 				</div>
 			</div>
 
@@ -46,7 +46,7 @@ get_header();
 										<div class="col-md-9">
 											<div class="card-body">
 												<h5 class="card-title mb-2">Address</h5>
-												<p class="card-text"><?php the_field('address'); ?></p>
+												<p class="card-text"><?php echo esc_html_e(get_field('address')); ?></p>
 											</div>
 										</div>
 									</div>
@@ -61,7 +61,7 @@ get_header();
 										<div class="col-md-9">
 											<div class="card-body">
 												<h5 class="card-title mb-2">Phone</h5>
-												<p class="card-text"><?php the_field('phone'); ?></p>
+												<p class="card-text"><?php echo esc_html_e(get_field('phone')); ?></p>
 											</div>
 										</div>
 									</div>
@@ -76,7 +76,7 @@ get_header();
 										<div class="col-md-9">
 											<div class="card-body">
 												<h5 class="card-title mb-2">Email</h5>
-												<p class="card-text"><?php the_field('email'); ?></p>
+												<p class="card-text"><?php echo esc_html_e(get_field('email')); ?></p>
 											</div>
 										</div>
 									</div>
@@ -115,7 +115,7 @@ get_header();
 						</div>
 					<div class="col-12 col-md-6">
 						<div class="contact-form">
-							<?php the_field('form_embed'); ?>
+							<?php echo get_field('form_embed'); ?>
 						</div>
 					</div>
 			</div>
