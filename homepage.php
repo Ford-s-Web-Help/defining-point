@@ -25,7 +25,7 @@ get_header(); ?>
         "post_type" => "slides",
     ]);
     if ($posts): ?>
-				<div id="slideWrap" class="carousel-inner">
+				<div id="slideWrap" class="carousel-inner" style="position: relative;height: auto;width: 100%;background-color: #000;">
 					
 					<?php foreach ($posts as $post):
 					    setup_postdata($post);

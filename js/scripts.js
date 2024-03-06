@@ -5,8 +5,11 @@
 
     const el = document.getElementById("slideWrap");
 
-    $("#slideWrap").mousemove(function (event) {
-      $("#slideOverlay").css("right", el.offsetWidth - event.clientX);
+    $("#slideWrap").on("mousemove", function (event) {
+      $(".carousel-item.active #slideOverlay").css(
+        "right",
+        el.offsetWidth - event.clientX
+      );
     });
 
     // Enable Text Animation
