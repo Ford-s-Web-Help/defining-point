@@ -18,45 +18,44 @@ get_header(); ?>
 	<main id="primary" class="site-main">
 		<div class="slideshow">
 			<div class="container-fluid">
-				<div id="carouselExampleControls"  class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
-				<?php
-    $posts = get_posts([
-        "posts_per_page" => 5,
-        "post_type" => "slides",
-    ]);
-    if ($posts): ?>
-				<div id="slideWrap" class="carousel-inner" style="position: relative;height: auto;width: 100%;background-color: #000;">
-					
-					<?php foreach ($posts as $post):
-					    setup_postdata($post);
-                        $slideImage =get_field("slide_image");
-                        $slideTitle = get_field("slide_title");
-					?>
-						
-								<div  class="carousel-item">
-
-										<div id="slideOverlay" style="position: absolute; background-color: rgba(58, 86, 165, 0.5); top:0; bottom: 0; left:0; right:100px;">
-										</div>
-										<img src="<?php echo  esc_html_e($slideImage); ?>" class="d-block w-100 img-fluid" alt="<?php echo  esc_html_e($slideTitle); ?>">
-
-								</div>
-						
-							<?php endforeach; ?>
-					
+			<div id="carouselExampleControls"  class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+					<?php
+					$posts = get_posts([
+						"posts_per_page" => 5,
+						"post_type" => "slides",
+					]);
+					if ($posts): ?>
+						   <div id="slideWrap" style="position: relative;height: auto;width: 100%;background-color: #000;">
 							
-
-					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Previous</span>
-					</button>
-					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Next</span>
-					</button>
-					</div>
-				
+								<div class="carousel-inner">
+								
+									<?php foreach ($posts as $post):
+									setup_postdata($post);
+									$slideImage =get_field("slide_image");
+									$slideTitle = get_field("slide_title");
+									?>
+									
+										<div  class="carousel-item">
+										<div id="slideOverlay" style="position: absolute; background-color: rgba(58, 86, 165, 0.5); top:0; bottom: 0; left:0; right:100px;"></div>
+												<img src="<?php echo  esc_html_e($slideImage); ?>" class="d-block w-100 img-fluid" alt="<?php echo  esc_html_e($slideTitle); ?>">
+										</div>
+										
+									<?php endforeach; ?>
+									</div>
+							
+							<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+							</button>
+							<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+							</button>
+							</div>
+							
+					
 				<?php wp_reset_postdata(); ?>
-
+				
 			<?php endif; ?>
 			</div>
 			</div>
