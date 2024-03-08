@@ -14,7 +14,7 @@ jobs:
         with:
           fetch-depth: 2
       - name: 📂 Sync folders and files to the server
-        uses: pfhenley86/defining-point
+        uses: pfhenley86/Ford-s-Web-Help/defining-point
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
