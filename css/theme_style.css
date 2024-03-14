@@ -352,6 +352,36 @@ nav.navbar .navbar-toggler {
   animate-delay: 6s; /* don't forget to set a duration! */
 }
 
+.services .event-info {
+  color: #fff;
+  padding: 2rem;
+  z-index: 999;
+}
+
+.services .event-info.creative {
+  background: #005b9f;
+  top: 38rem;
+  right: 15rem;
+}
+
+.services .event-info.events {
+  background: #a7cf53;
+  top: 38rem;
+  right: 15rem;
+}
+
+.services .event-info.broadcast {
+  background: #edb457;
+  top: 38rem;
+  right: 15rem;
+}
+
+.services .event-info.technology {
+  background: #f13a2d;
+  top: 38rem;
+  left: 15rem;
+}
+
 /** Work **/
 
 .work .container {
