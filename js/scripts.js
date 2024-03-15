@@ -75,5 +75,14 @@
       // set the type of token to animate (available types: 'char' and 'word')
       type: "char",
     });
+
+    // Work Page Masonry
+    $(".grid .grid-item:nth-child(odd)").addClass("grid-item--width2");
+
+    $(".grid").isotope({
+      // options
+      itemSelector: ".grid-item",
+      layoutMode: "fitRows",
+    });
   });
 })(jQuery);
