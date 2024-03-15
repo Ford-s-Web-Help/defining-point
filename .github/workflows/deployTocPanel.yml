@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: 🚚 Get latest code
-        uses: actions/checkout@v3
+        uses: actions/checkout@main
         with:
           fetch-depth: 2
       - name: 📂 Sync folders and files to the server
@@ -19,4 +19,4 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: sites/wp-content/themes/defining-point/
+          server-dir: /sites/wp-content/themes/defining-point/

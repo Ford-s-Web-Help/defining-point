@@ -161,6 +161,11 @@ function the_defining_point_scripts() {
 	wp_enqueue_script( 'textillate-js' , get_template_directory_uri() . '/js/textillate/jquery.textillate.js', array('jquery') );
 	// End Lettering Animate Scripts
 
+	// Work Masonry Scripts - Start
+	wp_enqueue_script( 'isostope-js' , get_template_directory_uri() . '/js/isotope.js', array('jquery') );
+	// Work Masonry Scripts - End
+
+
 	// Theme CSS
 	wp_enqueue_style( 'theme-animate' , get_template_directory_uri() . '/js/textillate/assets/animate.css' );
 	wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/css/theme_style.css' );

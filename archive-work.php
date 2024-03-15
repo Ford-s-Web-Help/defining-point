@@ -29,7 +29,11 @@ get_header();
 								<h3>News</h3>
 							</div>
 						</div>
-						<div class="row justify-content-evenly">
+					
+						<div class="row grid">
+							<ul>
+
+							</ul>
 						<?php
 							/* Start the Loop */
 							while ( have_posts() ) :

@@ -389,6 +389,10 @@ nav.navbar .navbar-toggler {
   padding: 4rem;
 }
 
+.work .grid-item { width: 38%; }
+.work .grid-item--width2 { width: 24% }
+}
+
 /** Contact Form **/
 .contact h2 {
   font-size: 1.2169em;
