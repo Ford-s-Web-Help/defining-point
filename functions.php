@@ -165,6 +165,13 @@ function the_defining_point_scripts() {
 	wp_enqueue_script( 'isostope-js' , get_template_directory_uri() . '/js/isotope.js', array('jquery') );
 	// Work Masonry Scripts - End
 
+    // SVG Animation Scripts - Start
+    wp_enqueue_style( 'liveicon-style', get_template_directory_uri() . '/js/livIconsevo/css/LivIconsEvo.css' );
+    wp_enqueue_script( 'liveiconsTools-js' , get_template_directory_uri() . '/js/livIconsevo/js/LivIconsEvo.Tools.js', array('jquery') );
+    wp_enqueue_script( 'liveiconsDefaults-js' , get_template_directory_uri() . '/js/livIconsevo/js/LivIconsEvo.defaults.js', array('jquery') );
+    wp_enqueue_script( 'liveicons-js' , get_template_directory_uri() . '/js/livIconsevo/js/LivIconsEvo.min.js', array('jquery') );
+    //  SVG Animation Scripts - End
+
 
 	// Theme CSS
 	wp_enqueue_style( 'theme-animate' , get_template_directory_uri() . '/js/textillate/assets/animate.css' );
