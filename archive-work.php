@@ -31,9 +31,14 @@ get_header();
 						</div>
 					
 						<div class="row grid">
-							<ul>
-
-							</ul>
+						<ul class="list-group list-group-horizontal">
+						<?php
+						$categories = get_categories();
+						foreach($categories as $category) {
+							echo '<li class="list-group-item"><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></li>';
+						 }
+						?>
+						</ul>
 						<?php
 							/* Start the Loop */
 							while ( have_posts() ) :
