@@ -79,11 +79,26 @@
     // Work Page Masonry
     $(".grid .grid-item:nth-child(odd)").addClass("grid-item--width2");
 
-    $(".grid").isotope({
-      // options
+   var $grid = $(".grid").isotope({
       itemSelector: ".grid-item",
       layoutMode: "fitRows",
     });
+
+// bind filter button click
+    $('.filters-list-group').on( 'click', 'button', function() {
+      var $filterValue = $( this ).attr('data-filter');
+      // use filterFn if matches value
+      $grid.isotope({ filter: $filterValue });
+    });
+// change is-checked class on buttons
+    $('.list-group').each( function( i, buttonGroup ) {
+      var $buttonGroup = $( buttonGroup );
+      $buttonGroup.on( 'click', 'button', function() {
+        $buttonGroup.find('.is-checked').removeClass('is-checked');
+        $( this ).addClass('is-checked');
+      });
+    });
+
 
     /************
       Live Icons

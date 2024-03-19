@@ -30,37 +30,54 @@ get_header();
 							</div>
 						</div>
 					
-						<div class="row grid">
-						<ul class="list-group list-group-horizontal">
-						<?php
-						$categories = get_categories();
-						foreach($categories as $category) {
-							echo '<li class="list-group-item"><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></li>';
-						 }
-						?>
-						</ul>
-						<?php
-							/* Start the Loop */
-							while ( have_posts() ) :
-								the_post();
+						<div class="row">
+                            <div class="col-md-12">
+                                <div class="list-group list-group-horizontal filters-list-group">
+                                    <button class="list-group-item" data-filter="*">show all
+                                    </button>
+                                    <?php
 
-								/*
-								* Include the Post-Type-specific template for the content.
-								* If you want to override this in a child theme, then include a file
-								* called content-___.php (where ___ is the Post Type name) and that will be used instead.
-								*/
-								get_template_part( 'template-parts/content', get_post_type() );
+                                    $categories = get_categories(array(
+                                        'orderby' => 'name',
+                                        'order' => 'ASC',
+                                        'exclude' => 1
+                                    ));
 
-							endwhile;
+                                    foreach ($categories as $category) {
 
-							the_posts_navigation();
+                                        $termName = strtolower($category->name);
+                                        $cleanSpace = preg_replace('/\s+/u', '-', $termName);
 
-						else :
+                                        echo '<button class="list-group-item" data-filter=".category-'
+                                            .$cleanSpace.'">' . $termName. '</button> ';
+                                    }
+                                    ?>
+                                </div>
+                            </div>
+                            <div class="col-md-12 grid">
+                                <?php
+                                /* Start the Loop */
+                                while ( have_posts() ) :
+                                    the_post();
 
-							get_template_part( 'template-parts/content', 'none' );
+                                    /*
+                                    * Include the Post-Type-specific template for the content.
+                                    * If you want to override this in a child theme, then include a file
+                                    * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+                                    */
+                                    get_template_part( 'template-parts/content', get_post_type() );
 
-						endif;
-						?>
+                                endwhile;
+
+                                the_posts_navigation();
+
+                                else :
+
+                                    get_template_part( 'template-parts/content', 'none' );
+
+                                endif;
+                                ?>
+                            </div>
 						</div>
 					</div>
 				</div>
