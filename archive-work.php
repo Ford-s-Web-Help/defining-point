@@ -21,67 +21,82 @@ get_header();
 				</div>
 			</div>
 			<div class="container-fluid">
-				<div class="row work">
-					<div class="container">
-						<div class="row text-center">
-							<div class="col-12">
-								<h2>The Defining Point</h2>
-								<h3>News</h3>
-							</div>
-						</div>
-					
-						<div class="row">
-                            <div class="col-md-12">
-                                <div class="list-group list-group-horizontal filters-list-group">
-                                    <button class="list-group-item" data-filter="*">show all
-                                    </button>
-                                    <?php
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h2>The Defining Point</h2>
+                        <h3>News</h3>
+                    </div>
+                </div>
+				<div class="row">
+                    <div class="filtering col-sm-12 text-center">
+                            <span class="active" data-filter="*">All
+                            </span>
+                            <?php
 
-                                    $categories = get_categories(array(
-                                        'orderby' => 'name',
-                                        'order' => 'ASC',
-                                        'exclude' => 1
-                                    ));
+                            $categories = get_categories(array(
+                                'orderby' => 'name',
+                                'order' => 'ASC',
+                                'exclude' => 1
+                            ));
 
-                                    foreach ($categories as $category) {
+                            foreach ($categories as $category) {
 
-                                        $termName = strtolower($category->name);
-                                        $cleanSpace = preg_replace('/\s+/u', '-', $termName);
+                                $termNameLow = strtolower($category->name);
+                                $termName = $category->name;
+                                $cleanSpace = preg_replace('/\s+/u', '-', $termNameLow);
 
-                                        echo '<button class="list-group-item" data-filter=".category-'
-                                            .$cleanSpace.'">' . $termName. '</button> ';
-                                    }
-                                    ?>
+                                echo '<span class="" data-filter=".category-'
+                                    .$cleanSpace.'">' . $termName. '</span> ';
+                            }
+                            ?>
+                    </div>
+
+
+                    <div class="row grid">
+
+                        <?php
+                        /* Start the Loop */
+                        $count = 1;
+                        while ( have_posts() ) :
+                            the_post();
+                        ?>
+                           <?php
+                            $divClass="";
+                            if ($count%2==0) {
+                                $divClass="col-xs-12 col-md-5";
+                            }
+                            else{
+                                $divClass="col-xs-12 col-md-3";
+                            }
+                            ?>
+                            <div class="grid-sizer"></div>
+                            <div id="post-<?php the_ID(); ?>" <?php post_class(''.$divClass.' mb-2 interior work-item grid-item');?>>
+                                <div class="grid-item-content">
+                                    <div class="card">
+                                        <img src="<?php echo esc_html_e(get_field('work_image')); ?>" class="card-img" />
+                                        <div class="card-body text-xs-center text-start">
+                                            <h4 class="card-category"> <?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?></h4>
+                                            <h5 class="card-title"><?php the_title(); ?></h5>
+                                            <p class="card-text"><?php echo esc_html_e(wp_trim_words( get_field('work_body'),
+                                                    80 )); ?></p>
+                                            <a href="<?php the_permalink(); ?>" class="btn btn btn-outline-secondary">Follow</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-12 grid">
-                                <?php
-                                /* Start the Loop */
-                                while ( have_posts() ) :
-                                    the_post();
+                        <?php $count++; ?>
+                       <?php endwhile;
 
-                                    /*
-                                    * Include the Post-Type-specific template for the content.
-                                    * If you want to override this in a child theme, then include a file
-                                    * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-                                    */
-                                    get_template_part( 'template-parts/content', get_post_type() );
+                        the_posts_navigation();
 
-                                endwhile;
+                        else :
 
-                                the_posts_navigation();
+                            get_template_part( 'template-parts/content', 'none' );
 
-                                else :
-
-                                    get_template_part( 'template-parts/content', 'none' );
-
-                                endif;
-                                ?>
-                            </div>
-						</div>
-					</div>
-				</div>
-			</div>
+                        endif;
+                        ?>
+			    </div>
+                </div>
 	</main><!-- #main -->
 
 <?php
