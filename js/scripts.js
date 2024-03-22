@@ -77,26 +77,21 @@
     });
 
     // Work Page Masonry
-    $(".grid .grid-item:nth-child(odd)").addClass("grid-item--width2");
+    $(".grid").isotope({ filter: '*' });
 
-   var $grid = $(".grid").isotope({
-      itemSelector: ".grid-item",
-      layoutMode: "fitRows",
-    });
-
-// bind filter button click
-    $('.filters-list-group').on( 'click', 'button', function() {
-      var $filterValue = $( this ).attr('data-filter');
-      // use filterFn if matches value
-      $grid.isotope({ filter: $filterValue });
-    });
-// change is-checked class on buttons
-    $('.list-group').each( function( i, buttonGroup ) {
-      var $buttonGroup = $( buttonGroup );
-      $buttonGroup.on( 'click', 'button', function() {
-        $buttonGroup.find('.is-checked').removeClass('is-checked');
-        $( this ).addClass('is-checked');
+    $(".filtering").on("click", "span", function () {
+      var a = $(".grid").isotope({
+        itemSelector: '.grid-item', // use a separate class for itemSelector, other than .col-
+        percentPosition: true,
+        masonry: {
+          columnWidth: '.grid-sizer'
+        }
       });
+      var e = $(this).attr("data-filter");
+      a.isotope({ filter: e });
+    });
+    $(".filtering").on("click", "span", function () {
+      $(this).addClass("active").siblings().removeClass("active");
     });
 
 
