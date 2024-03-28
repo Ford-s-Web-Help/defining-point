@@ -21,7 +21,7 @@ get_header();
 				</div>
 			</div>
 			<div class="container-fluid">
-                <div class="row text-center">
+                <div class="row text-center mt-4 mb-2 page-heading">
                     <div class="col-12">
                         <h2>The Defining Point</h2>
                         <h3>News</h3>

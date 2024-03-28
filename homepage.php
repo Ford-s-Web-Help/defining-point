@@ -129,7 +129,6 @@ get_header(); ?>
                             $solutionSummary = get_field("solution_summary");
                             ?>
 								<div class="col-12 col-sm-6 col-xl-6">
-									<a class="text-decoration-none" href="<?php the_permalink(); ?>">
 										<div class="card">
 											<div class="row">
 												<div class="card-img-container col-12 col-md-4">
@@ -163,7 +162,6 @@ get_header(); ?>
 												</div>
 											</div>
 										</div>
-									</a>
 								</div>
 							<?php
        endforeach; ?>

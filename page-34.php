@@ -27,7 +27,7 @@ get_header();
 		</div>
 		<div class="container contact">
 		<?php while ( have_posts() ) : the_post(); ?>
-			<div class="row text-center">
+			<div class="row text-center page-heading">
 				<div class="col-12">
 					<h2><?php echo esc_html_e(get_field('heading')); ?></h2>
 					<h3><?php echo esc_html_e(get_field('subtitle')); ?></h3>

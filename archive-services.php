@@ -23,7 +23,7 @@ get_header();
 			<div class="container-fluid">
 				<div class="row services">
 					<div class="container">
-						<div class="row text-center">
+						<div class="row text-center page-heading">
 							<div class="col-12">
 								<h2>We Create</h2>
 								<h3>Strategic Solutions</h3>
