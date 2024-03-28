@@ -30,6 +30,15 @@ h2 {
   font-size: 2em;
 }
 
+.page-heading h2 {
+  font-size: 1.23em;
+  letter-spacing: 0.1em;
+}
+
+.page-heading h3 {
+  font-size: 3.02em;
+}
+
 /******** 
   Header 
 ********/
@@ -384,7 +393,9 @@ nav.navbar .navbar-toggler {
 
 /** Work **/
 
-body{margin-top:20px;}
+body {
+  margin-top: 20px;
+}
 .filtering {
   margin-bottom: 40px;
 }
@@ -404,17 +415,16 @@ body{margin-top:20px;}
   margin: 0;
 }
 .filtering .active {
-
 }
 
-.work-item{
+.work-item {
   padding: 0;
 }
-.grid-sizer{
+.grid-sizer {
   width: 0.5rem;
 }
 
-
+.arch
 
 
 /** Contact Form **/
@@ -529,7 +539,11 @@ Media Queries
   }
 
   .solutions .card-img-container {
-    max-width: 10rem;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .solutions .livicon-evo-holder {
     margin: 0 auto;
   }
 
