@@ -77,15 +77,16 @@
     });
 
     // Work Page Masonry
-    $(".grid").isotope({ filter: '*' });
+    $(".grid").isotope({ filter: "*" });
 
     $(".filtering").on("click", "span", function () {
       var a = $(".grid").isotope({
-        itemSelector: '.grid-item', // use a separate class for itemSelector, other than .col-
+        itemSelector: ".grid-item",
         percentPosition: true,
         masonry: {
-          columnWidth: '.grid-sizer'
-        }
+          // use element for option
+          columnWidth: ".grid-sizer",
+        },
       });
       var e = $(this).attr("data-filter");
       a.isotope({ filter: e });
@@ -93,7 +94,6 @@
     $(".filtering").on("click", "span", function () {
       $(this).addClass("active").siblings().removeClass("active");
     });
-
 
     /************
       Live Icons
@@ -155,7 +155,7 @@
       eraseStartPoint: "middle",
       eraseReversed: true,
       eraseEase: "Power1.easeOut",
-      touchEvents: false
+      touchEvents: false,
     });
 
     // Blub
@@ -214,7 +214,7 @@
       eraseStartPoint: "middle",
       eraseReversed: true,
       eraseEase: "Power1.easeOut",
-      touchEvents: false
+      touchEvents: false,
     });
 
     // Tablet
@@ -273,7 +273,7 @@
       eraseStartPoint: "middle",
       eraseReversed: true,
       eraseEase: "Power1.easeOut",
-      touchEvents: false
+      touchEvents: false,
     });
 
     // Camera
@@ -332,7 +332,7 @@
       eraseStartPoint: "middle",
       eraseReversed: true,
       eraseEase: "Power1.easeOut",
-      touchEvents: false
+      touchEvents: false,
     });
   });
 })(jQuery);
