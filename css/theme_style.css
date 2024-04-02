@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap");
 /*******************
-Custome Theme Styles
+Custom Theme Styles
 ********************/
 a,
 a:visited,
@@ -26,8 +26,13 @@ h1.entry-title {
 }
 
 h2 {
+  color: rgba(77, 60, 55, 1);
   text-transform: uppercase;
   font-size: 2em;
+}
+
+.page-heading{
+  color: rgba(77, 60, 55, 1);
 }
 
 .page-heading h2 {
@@ -64,7 +69,7 @@ nav.navbar {
 
 nav.navbar .navbar-toggler {
   color: #fff;
-  background: #4d3c38;
+  background: rgba(77, 60, 55, 1);
 }
 
 .menu-menu-1-container {
@@ -73,7 +78,7 @@ nav.navbar .navbar-toggler {
 
 #primary-menu.navbar-nav li a {
   font-size: 1.525em;
-  color: #4d3c38;
+  color: rgba(77, 60, 55, 1);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-decoration: none;
@@ -81,7 +86,7 @@ nav.navbar .navbar-toggler {
 }
 
 #primary-menu.navbar-nav li a:hover {
-  border-bottom: 2px solid #4d3c38;
+  border-bottom: 2px solid rgba(77, 60, 55, 1);
 }
 
 /******** 
@@ -102,6 +107,7 @@ nav.navbar .navbar-toggler {
 }
 
 .box {
+  color: rgba(77, 60, 55, 1);
   padding: 4rem;
   margin: 2rem;
 }
@@ -170,23 +176,23 @@ nav.navbar .navbar-toggler {
 }
 
 .solutions .card-body {
+  color: rgba(126, 126, 130, 1);
   padding: 0.5rem;
+}
+
+.solutions .card-title {
+  color: rgba(77, 60, 55, 1);
+  font-size: 2.25em;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
 }
 
 .solutions .card-img-container {
   max-width: 10rem;
 }
 
-.solutions .btn-outline-secondary {
-  border-radius: 0;
-  max-width: 15rem;
-  margin: 2rem auto;
-  padding: 0.7rem;
-  text-transform: uppercase;
-}
-
 .solutions .btn-outline-secondary:hover {
-  background-color: #4d3c38;
+
 }
 
 /******** 
@@ -222,7 +228,7 @@ nav.navbar .navbar-toggler {
 }
 
 .promos .btn-outline-secondary:hover {
-  background-color: #4d3c38;
+  background-color: rgba(77, 60, 55, 1);
 }
 
 /** About Page **/
@@ -283,22 +289,22 @@ nav.navbar .navbar-toggler {
 }
 
 .structure .card .red:hover {
-  background: #f1392d;
+  background: rgba(239, 67, 35, 1);
   opacity: 0.9;
 }
 
 .structure .card .blue:hover {
-  background: #116bab;
+  background: rgba(13, 105, 175, 1);
   opacity: 0.9;
 }
 
 .structure .card .green:hover {
-  background: #a7cf53;
+  background: rgba(171, 208, 55, 1);
   opacity: 0.9;
 }
 
 .structure .card .gold:hover {
-  background: #e9af4f;
+  background: rgba(233, 177, 58, 1);
   opacity: 0.9;
 }
 
@@ -321,6 +327,16 @@ nav.navbar .navbar-toggler {
   overflow: hidden !important;
   width: 100% !important;
   height: 100% !important;
+}
+
+.solutions .explore a.btn{
+  color: rgba(77, 60, 55, 1);
+  border: 1px solid;
+  border-color: rgba(77, 60, 55, 1);
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 1rem;
 }
 
 /** Services Page **/
@@ -364,31 +380,34 @@ nav.navbar .navbar-toggler {
 .services .event-info {
   color: #fff;
   padding: 2rem;
+  margin: 1rem;
+  max-width: 33rem;
+  top: 42rem;
   z-index: 999;
 }
 
+.service .event-info.event-pos{
+  position: absolute;
+}
+
 .services .event-info.creative {
-  background: #005b9f;
-  top: 38rem;
-  right: 15rem;
+  background: rgba(13, 105, 175, 1);
+  right: 10rem;
 }
 
 .services .event-info.events {
-  background: #a7cf53;
-  top: 38rem;
-  right: 15rem;
+  background: rgba(171, 208, 55, 1);
+  right: 10rem;
 }
 
 .services .event-info.broadcast {
-  background: #edb457;
-  top: 38rem;
-  right: 15rem;
+  background: rgba(233, 177, 58, 1);
+  left: 10rem;
 }
 
 .services .event-info.technology {
-  background: #f13a2d;
-  top: 38rem;
-  left: 15rem;
+  background: rgba(239, 67, 35, 1);
+  left: 10rem;
 }
 
 /** Work **/
@@ -396,22 +415,20 @@ nav.navbar .navbar-toggler {
   margin-bottom: 40px;
 }
 .filtering span {
-  border-bottom: 2px solid transparent;
-  color: #282b2d;
+  border:none;
+  color: rgba(77, 60, 55, 1);
   cursor: pointer;
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-right: 20px;
+  font-size: 1.2169em;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  padding:0 1.5rem;
   display: inline-block;
-  margin-bottom: 5px;
+  margin-bottom: 0.3125em;
   text-transform: uppercase;
 }
 .filtering span:last-child {
   margin: 0;
 }
-
-
 /* ---- .grid-item ---- */
 /* .grid-sizer,
 .grid-item { width: 20%; }
@@ -428,6 +445,47 @@ nav.navbar .navbar-toggler {
   width: 300px;
   height: 200px;
 } */
+
+.work .card {
+  border: none;
+}
+
+.work .card-img{
+  border-radius: 0;
+}
+
+.work .card-body{
+  padding: 1.5rem 0;
+}
+
+.work .card-body a{
+  border-radius: 0;
+  text-transform: uppercase;
+}
+
+.work .card-category{
+  color: rgba(77, 60, 55, 1);
+  font-size: 1.2169em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.work .card-title{
+  color: rgba(77, 60, 55, 1);
+  font-size: 1.6669em;
+  text-transform: capitalize;
+}
+
+.post-type-archive-work .more a.btn{
+  color: rgba(77, 60, 55, 1);
+  border: 1px solid;
+  border-color: rgba(77, 60, 55, 1);
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 1rem 2rem;
+}
+
 
 /** Contact Form **/
 .contact h2 {
@@ -462,7 +520,7 @@ div.wpforms-container-full input {
 
 /** Footer **/
 footer {
-  background-color: #4f3b37;
+  background-color: rgba(77, 60, 55, 1);
   color: #fff;
   padding: 2rem 1rem;
 }
@@ -547,6 +605,12 @@ Media Queries
 
   .solutions .livicon-evo-holder {
     margin: 0 auto;
+  }
+
+  .service .event-info.event-pos{
+    position: relative;
+    top: 0;
+    right: 0;
   }
 
   footer .footer-icons {

@@ -18,7 +18,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
+        <div class="container">
             <div class="row text-center mt-4 mb-2 page-heading">
                 <div class="col-12">
                     <h2>The Defining Point</h2>
@@ -26,7 +26,7 @@ get_header();
                 </div>
             </div>
             <div class="row">
-                <div class="filtering col-sm-12 text-center">
+                <div class="filtering mt-5 col-sm-12 text-center">
                         <span class="active" data-filter="*">All
                         </span>
                         <?php
@@ -50,7 +50,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
+        <div class="container">
             <div class="grid">
                 <div class="grid-sizer col-xs-4 col-md-4"></div>
                     <?php
@@ -68,14 +68,17 @@ get_header();
                             $divClass="";
                         }
                         ?>
-                        <div id="post-<?php the_ID(); ?>" <?php post_class('col-xs-12 col-md-4 mb-2 interior work-item grid-item '.$divClass.'');?>>
+                        <div id="post-<?php the_ID(); ?>" <?php post_class('col-xs-12 col-md-4 mb-2 p-2 interior work-item grid-item '.$divClass.'');?>>
                             <div class="grid-item-content">
                                 <div class="card">
                                     <img src="<?php echo esc_html_e(get_field('work_image')); ?>" class="card-img" />
                                     <div class="card-body text-xs-center text-start">
-                                        <h4 class="card-category"> <?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?></h4>
+                                        <h4 class="card-category pb-2"> <?php foreach(
+                                                (get_the_category()) as $category) { echo $category->cat_name . ' '; } ?></h4>
                                         <h5 class="card-title"><?php the_title(); ?></h5>
-                                        <p class="card-text"><?php echo esc_html_e(wp_trim_words( get_field('work_body'),
+                                        <p class="card-text pt-2 pb-2"><?php echo esc_html_e
+                                            (wp_trim_words
+                                            ( get_field('work_body'),
                                                 60 )); ?></p>
                                         <a href="<?php the_permalink(); ?>" class="btn btn btn-outline-secondary">Follow</a>
                                     </div>
@@ -94,6 +97,9 @@ get_header();
                     endif;
                     ?>
             
+            </div>
+            <div class="more text-center p-4 mt-3 mb-5">
+                <a id="loadMore" class="btn btn btn-outline-secondary" href="#" role="button">Load More</a>
             </div>
         </div>
 </main><!-- #main -->
