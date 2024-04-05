@@ -91,9 +91,10 @@ get_header(); ?>
 			</div>
 			<div class="row">
 				<div class="col-12 text-center">
-				<?php $sizzleReel_Url = get_field("sizzle_reel", 7);
-				while (have_posts()):
-					the_post(); ?>
+				<?php
+	$sizzleReel_Url = get_field("sizzle_reel", 7);
+	while (have_posts()):
+		the_post(); ?>
 					<a class="sizzle-reel" href="<?php echo esc_html_e($sizzleReel_Url); ?>" target="_blank" title="Watch Our Sizzle Reel">
 					<img src="<?php echo get_template_directory_uri(); ?>/img/sizzle-reel.jpg" alt="Sizzle Reel Image" />
 				</a>
@@ -168,103 +169,15 @@ get_header(); ?>
 		</div>
 		<?php endforeach; ?>
 		</div>
-			<div class="row">
-				<a class="btn btn btn-outline-secondary" href="/services">Explore Our Services</a>
-			</div>
+            <div class="explore text-center p-4 mt-3 mb-5">
+                <a class="btn btn btn-outline-secondary" href="/services" role="button">Explore Our Services</a>
+            </div>
 		</div>
 		<?php wp_reset_postdata(); ?>
 	<?php endif; ?>
 	</div>
 </div>
 <!-- End Services -->
-
-<!-- Start About Blurb -->
-<div class="about-blurb box">
-	<div class="container">
-		<div class="row">
-			<?php
-			$aboutBlurb = get_field('about_blurb');
-			var_dump($aboutBlurb);
-			if( $aboutBlurb): ?>
-					<div class="col-xs-12 col-md-4">
-						<img src="<?php echo esc_url( $aboutBlurb['blurb_image']['url'] ); ?>" alt="<?php echo esc_attr( $aboutBlurb['blurb_image']['alt'] ); ?>" />
-					</div>
-					<div class="col-xs-12 col-md-8">
-						<h3><?php echo $aboutBlurb['blurb_sub_title']; ?></h3>
-						<h4><?php echo $aboutBlurb['blurb_title']; ?></h4>
-						<p><?php echo $aboutBlurb['blurb_summary']; ?></p>
-						<a href="<?php echo esc_url( $aboutBlurb['blurb_link']['url'] ); ?>"><?php echo esc_html( $aboutBlurb['blurb_link']['title'] ); ?></a>
-					</div>
-			<?php endif; ?>
-		</div>
-	</div>
-</div>
-<!-- End About Blurb -->
-
-<!-- Start Work Summary -->
-<div class="work-summary box">
-	<div class="container text-center"">
-		<div class="row">
-			<div class="box-title col-12 m-4">
-				<h3>Featured Projects</h3>
-				<h4>Browse Our Work</h4>
-			</div>
-		</div>
-	</div>
-	<div class="container-fluid">
-		<div class="grid">
-		<div class="grid-sizer col-xs-4 col-md-4"></div>
-		<?php 
-
-		$posts = get_posts(array(
-		'posts_per_page'    => 12,
-		'post_type'         => 'work'
-		));
-
-		if( $posts ): ?>
-
-		
-		<?php 
-		$count = 1;
-		foreach( $posts as $post ): 
-			
-			setup_postdata( $post );
-			
-			?>
-			<?php
-				$divClass="";
-				if ($count%2==0) {
-					$divClass="grid-item--height2";
-				}
-				else{
-					$divClass="";
-				}
-				?>
-			<div id="post-<?php the_ID(); ?>" <?php post_class('col-xs-12 col-md-4 mb-2 interior work-item grid-item '.$divClass.'');?>>
-				<div class="grid-item-content">
-					<div class="card">
-						<img src="<?php echo esc_html_e(get_field('work_image')); ?>" class="card-img" />
-						<div class="card-body text-xs-center text-start">
-							<h4 class="card-category"> <?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?></h4>
-							<h5 class="card-title"><?php the_title(); ?></h5>
-							<p class="card-text"><?php echo esc_html_e(wp_trim_words( get_field('work_body'),
-									60 )); ?></p>
-							<a href="<?php the_permalink(); ?>" class="btn btn btn-outline-secondary">Follow</a>
-						</div>
-					</div>
-				</div>      
-			</div>
-		<?php $count++; ?>
-
-		<?php endforeach; ?>
-
-		<?php wp_reset_postdata(); ?>
-
-		<?php endif; ?>
-		</div>
-	</div>
-</div>
-<!-- End Start Work Summary-->
 
 <!-- Start Promos -->
 <?php $posts = get_posts(["posts_per_page" => 1, "post_type" => "promos"]);

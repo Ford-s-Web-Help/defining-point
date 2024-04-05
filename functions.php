@@ -158,8 +158,9 @@ function the_defining_point_scripts() {
 	wp_enqueue_script( 'textillate-js' , get_template_directory_uri() . '/js/textillate/jquery.textillate.js', array('jquery') );
 	// End Lettering Animate Scripts
 
-	// Work Masonry Scripts - Start
+	// Work Isotope Scripts - Start
 	wp_enqueue_script( 'isostope-js' , get_template_directory_uri() . '/js/isotope.js', array('jquery') );
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 	// Work Masonry Scripts - End
 =======
@@ -167,6 +168,11 @@ function the_defining_point_scripts() {
     ('jquery') );
 	// Work Isotope Scripts - End
 >>>>>>> Stashed changes
+=======
+//    wp_enqueue_script( 'lazyload-js' , get_template_directory_uri() . '/js/jquery.lazy.min.js', array
+//    ('jquery') );
+	// Work Isotope Scripts - End
+>>>>>>> main
 
     // SVG Animation Scripts - Start
 //    wp_enqueue_script( 'olderjs-js' , get_template_directory_uri() . '/js/jquery_10.js', array('jquery') );

@@ -9,6 +9,7 @@
       $("#slideOverlay").css("right", el.offsetWidth - event.clientX);
     });
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
     //Service Collapse Bind
@@ -75,6 +76,12 @@
 
 
 >>>>>>> Stashed changes
+=======
+    // Lazy Load Work Images
+
+
+
+>>>>>>> main
     // Enable Text Animation
     $(".tlt").textillate({
       // the default selector to use when detecting multiple texts to animate

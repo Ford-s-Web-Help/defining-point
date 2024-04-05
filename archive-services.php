@@ -20,16 +20,16 @@ get_header();
 					</div>
 				</div>
 			</div>
-			<div class="container-fluid">
+			<div class="container">
 				<div class="row services">
-					<div class="container">
-						<div class="row text-center page-heading">
+					<div class="container mt-2 mb-5">
+						<div class="row text-center page-heading pt-3 pb-3 mb-3">
 							<div class="col-12">
 								<h2>We Create</h2>
 								<h3>Strategic Solutions</h3>
 							</div>
 						</div>
-						<div class="row justify-content-evenly">
+						<div id="servicebox" class="row justify-content-evenly">
 						<?php
 							/* Start the Loop */
 							while ( have_posts() ) :
