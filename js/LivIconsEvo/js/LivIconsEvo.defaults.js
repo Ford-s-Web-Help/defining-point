@@ -26,7 +26,7 @@ function LivIconsEvoDefaults () {
 		The better way is to use a pure path from root without specifying http(s) protocols.
 		In this case your icons will work on subdomains too, for example, with or without "www".
 		*/
-		pathToFolder: '/wp-content/themes/defining-point/js/LivIconsEvo/svg/',
+		pathToFolder: '/wp-content/themes/defining-point/js/livIconsEvo/svg/',
 		name: 'bell.svg', //the default icon name
 
 		//visualization options

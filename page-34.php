@@ -89,19 +89,28 @@ get_header();
 												<img src="<?php echo get_template_directory_uri(); ?>/img/contact/the-defining-point-social-icon.png" class="img-fluid rounded-start" alt="Yellow Smart Phone Icon with notification icons">
 											</div>
 											<div class="col-md-9">
-												<div class="card-body">
+												<div class="card-body social">
 													<h5 class="card-title mb-2">Social</h5>
 													<?php if( have_rows('social') ): ?>
 														<?php while( have_rows('social') ): the_row(); ?>
 															<ul class="list-group list-group-horizontal">
 																<li class="list-group-item">
-																	<a href="<?php the_sub_field('instagram'); ?>"></a>
+																	<a href="<?php the_sub_field('instagram'); ?>">
+                                                                        <img src="<?php echo
+                                                                        get_template_directory_uri(); ?>/img/assets/instagram-dark.png" alt="Instagram Icon">
+                                                                    </a>
 																</li>
 																<li class="list-group-item">
-																	<a href="<?php the_sub_field('linkedIn'); ?>"></a>
+																	<a href="<?php the_sub_field('linkedIn'); ?>">
+                                                                        <img src="<?php echo
+                                                                        get_template_directory_uri(); ?>/img/assets/linkedin-dark.png" alt="LinkedIn Icon">
+                                                                    </a>
 																</li>
 																<li class="list-group-item">
-																	<a href="<?php the_sub_field('vimeo'); ?>"></a>
+																	<a href="<?php the_sub_field('vimeo'); ?>">
+                                                                        <img src="<?php echo
+                                                                        get_template_directory_uri(); ?>/img/assets/vimeo-dark.png" alt="Vimeo Icon">
+                                                                    </a>
 																</li>
 															</ul>
 														</div>

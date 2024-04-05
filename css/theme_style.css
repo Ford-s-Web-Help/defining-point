@@ -15,6 +15,7 @@ a:hover {
 body {
   font-family: "Nanum Gothic", sans-serif;
   font-size: 16px;
+  background-color: rgba(255, 255, 255, 1);
 }
 h1 {
   color: #ffffff;
@@ -154,7 +155,7 @@ nav.navbar .navbar-toggler {
   Solutions
 ***********/
 .solutions.box {
-  background-color: #f9f9f9;
+  background-color: rgba(249, 249, 249, 1);
   margin: 0;
 }
 
@@ -238,7 +239,7 @@ nav.navbar .navbar-toggler {
 }
 
 .abt-grey {
-  background-color: #f9f9f9;
+  background-color: rgba(249, 249, 249, 1);
 }
 
 .about .about-container {
@@ -380,6 +381,30 @@ nav.navbar .navbar-toggler {
 .services .event-info {
   color: #fff;
   padding: 2rem;
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+  z-index: 999;
+}
+
+=======
+  margin: 1rem;
+  max-width: 33rem;
+  top: 44rem;
+  z-index: 999;
+}
+
+.services .event-info ul {
+  margin: 0;
+}
+
+.service .event-info.event-pos{
+  position: absolute;
+  overflow: hidden;
+  font-size: 0.8em;
+}
+
+>>>>>>> Stashed changes
+=======
   margin: 1rem;
   max-width: 33rem;
   top: 42rem;
@@ -390,6 +415,7 @@ nav.navbar .navbar-toggler {
   position: absolute;
 }
 
+>>>>>>> main
 .services .event-info.creative {
   background: rgba(13, 105, 175, 1);
   right: 10rem;
@@ -406,11 +432,59 @@ nav.navbar .navbar-toggler {
 }
 
 .services .event-info.technology {
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+  background: #f13a2d;
+  top: 38rem;
+  left: 15rem;
+=======
   background: rgba(239, 67, 35, 1);
   left: 10rem;
+  min-height: 26rem;
+>>>>>>> Stashed changes
+=======
+  background: rgba(239, 67, 35, 1);
+  left: 10rem;
+>>>>>>> main
 }
 
-/** Work **/
+.tech-body{
+  background-color: rgba(249, 249, 249, 1);
+  font-size: 0.8em;
+  padding: 2rem 3rem 3rem 3rem;
+  max-width: 35rem;
+  min-height: 23rem;
+}
+
+.tech-body h3{
+  font-size: 2.8em;
+  text-transform: uppercase;
+}
+.tech-body h4{
+  color: rgba(239, 67, 35, 1);
+  font-size: 2.3331em;
+}
+
+.tech-body ul {
+  margin: 0;
+}
+
+.tech-body ul li::marker {
+  color: rgba(239, 67, 35, 1);
+}
+
+.tech-img .play-btn{
+  top: 8rem;
+  left: -4rem;
+}
+
+.panel-img{
+ padding: 0;
+}
+
+
+
+  /** Work **/
 .filtering {
   margin-bottom: 40px;
 }
@@ -446,6 +520,11 @@ nav.navbar .navbar-toggler {
   height: 200px;
 } */
 
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+=======
+>>>>>>> main
 .work .card {
   border: none;
 }
@@ -476,6 +555,13 @@ nav.navbar .navbar-toggler {
   text-transform: capitalize;
 }
 
+<<<<<<< HEAD
+.post-type-archive-work .pagination{
+  display: block;
+}
+
+=======
+>>>>>>> main
 .post-type-archive-work .more a.btn{
   color: rgba(77, 60, 55, 1);
   border: 1px solid;
@@ -487,6 +573,10 @@ nav.navbar .navbar-toggler {
 }
 
 
+<<<<<<< HEAD
+>>>>>>> Stashed changes
+=======
+>>>>>>> main
 /** Contact Form **/
 .contact h2 {
   font-size: 1.2169em;
@@ -508,14 +598,44 @@ nav.navbar .navbar-toggler {
   text-transform: uppercase;
 }
 
-.contact-form {
-  padding: 4rem;
-  margin: 0 !important;
-  border: 0.01rem solid #54403c;
+.card-body.social ul{
+  margin: 0;
 }
 
-div.wpforms-container-full input {
-  background: #f9f9f9;
+.card-body.social ul li{
+  border: none;
+  padding: 1rem 1rem 0 0;
+}
+
+.contact-form {
+  padding: 2.5rem 3.5rem;
+  margin: 0 !important;
+  border: 0.01rem solid rgba(77, 60, 55, 1);
+}
+
+.contact-form div.wpforms-container-full .wpforms-field-label{
+  font-family: "Nanum Gothic", sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.contact-form div.wpforms-container-full button[type=submit]:not(:hover):not(:active){
+  background-color: #ffffff;
+  border: 1px solid rgba(77, 60, 55, 1);
+  border-radius: 0;
+  color: rgba(77, 60, 55, 1);
+  display: block;
+  width: 100%;
+  max-width: 10rem;
+  margin: 0 auto;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.contact-form div.wpforms-container-full input[type=text],
+.contact-form div.wpforms-container-full input[type=email],
+.contact-form div.wpforms-container-full .wpforms-form textarea.wpforms-field-medium{
+  background: rgba(249, 249, 249, 1);
+  border-radius: 0;
 }
 
 /** Footer **/
@@ -607,44 +727,44 @@ Media Queries
     margin: 0 auto;
   }
 
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+=======
+>>>>>>> main
   .service .event-info.event-pos{
     position: relative;
     top: 0;
     right: 0;
+<<<<<<< HEAD
+    left: 0;
   }
 
+  .service .tech-info{
+    background-color: rgba(249, 249, 249, 1);
+  }
+
+    .service .tech-info span.p-2.tech-icon{
+    display: inline-block;
+  }
+
+  .tech-img .play-btn {
+    top: 8rem;
+    left: 6rem;
+  }
+
+>>>>>>> Stashed changes
+=======
+  }
+
+>>>>>>> main
   footer .footer-icons {
     display: inline-flex;
     margin-left: 0;
   }
 }
 
-@media screen and (max-width: 1199px) {
-  .grid .grid-item .portfolio-content h4 {
-    font-size: 18px;
-  }
-}
-@media screen and (max-width: 991px) {
-  .grid .grid-item .portfolio-content h4 {
-    margin-bottom: 10px;
-  }
-  .grid .grid-item .portfolio-content p {
-    font-size: 15px;
-  }
-  .grid .grid-item .portfolio-content a {
-    margin-bottom: 10px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .grid .grid-item .portfolio-content h4 {
-    font-size: 17px;
-  }
-  .grid .grid-item .portfolio-content p {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 575px) {
-  .grid .grid-item .portfolio-content h4 {
-    font-size: 16px;
-  }
-}
+
+
+
+
