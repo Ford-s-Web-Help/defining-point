@@ -52,17 +52,8 @@ get_header();
                 </div>
             </div>
         </div>
-<<<<<<< Updated upstream
-        <div class="container">
-=======
-<<<<<<< Updated upstream
-        <div class="container-fluid">
->>>>>>> Stashed changes
-            <div class="grid">
-=======
         <div class="container">
             <div class="grid" data-js="grid">
->>>>>>> Stashed changes
                 <div class="grid-sizer col-xs-4 col-md-4"></div>
                     <?php
                     /* Start the Loop */
@@ -109,20 +100,9 @@ get_header();
                     ?>
             
             </div>
-<<<<<<< Updated upstream
             <div class="more text-center p-4 mt-3 mb-5">
                 <a id="loadMore" class="btn btn btn-outline-secondary" href="#" role="button">Load More</a>
             </div>
-=======
-<<<<<<< Updated upstream
-=======
-            <div class="more text-center p-4 mt-3 mb-5">
-                <a id="loadMore" class="btn btn-outline-secondary" href="#" role="button">Load More</a>
-            </div>
-
-
->>>>>>> Stashed changes
->>>>>>> Stashed changes
         </div>
 </main><!-- #main -->
 
