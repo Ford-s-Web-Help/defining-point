@@ -12,7 +12,9 @@ get_header();
 <main id="primary" class="site-main">
     <?php if ( have_posts() ) : ?>
         <div class="container-fluid">
-            <div class="row page-title text-center" style="background: url('<?php echo get_template_directory_uri(); ?>/img/headers/work-header-bg.png'); background-size: cover; background-position: center;">
+            <div class="row page-title text-center" style="background: url('<?php echo
+            get_template_directory_uri(); ?>/img/headers/work-header-bg.jpg'); background-size:
+                    cover; background-position: center;">
                 <div class="col-12">
                     <h1 class="entry-title"><?php post_type_archive_title(); ?></h1>
                 </div>
@@ -50,8 +52,17 @@ get_header();
                 </div>
             </div>
         </div>
+<<<<<<< Updated upstream
         <div class="container">
+=======
+<<<<<<< Updated upstream
+        <div class="container-fluid">
+>>>>>>> Stashed changes
             <div class="grid">
+=======
+        <div class="container">
+            <div class="grid" data-js="grid">
+>>>>>>> Stashed changes
                 <div class="grid-sizer col-xs-4 col-md-4"></div>
                     <?php
                     /* Start the Loop */
@@ -98,9 +109,20 @@ get_header();
                     ?>
             
             </div>
+<<<<<<< Updated upstream
             <div class="more text-center p-4 mt-3 mb-5">
                 <a id="loadMore" class="btn btn btn-outline-secondary" href="#" role="button">Load More</a>
             </div>
+=======
+<<<<<<< Updated upstream
+=======
+            <div class="more text-center p-4 mt-3 mb-5">
+                <a id="loadMore" class="btn btn-outline-secondary" href="#" role="button">Load More</a>
+            </div>
+
+
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
         </div>
 </main><!-- #main -->
 
