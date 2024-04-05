@@ -9,6 +9,72 @@
       $("#slideOverlay").css("right", el.offsetWidth - event.clientX);
     });
 
+<<<<<<< Updated upstream
+=======
+    //Service Collapse Bind
+
+    var $myGroup = $('#servicebox');
+    $myGroup.on('show.bs.collapse','.collapse', function() {
+      $myGroup.find('.collapse.in').collapse('hide');
+    });
+
+    // Work Page Masonry
+    $(".grid").isotope({ filter: "*" });
+
+    $(".filtering").on("click", "span", function () {
+      let a = $(".grid").isotope({
+        itemSelector: ".grid-item",
+        percentPosition: true,
+        masonry: {
+          // use element for option
+          columnWidth: ".grid-sizer",
+          stagger: 30,
+          // nicer reveal transition
+          visibleStyle: { transform: 'translateY(0)', opacity: 1 },
+          hiddenStyle: { transform: 'translateY(100px)', opacity: 0 },
+          visibleStyle: { transform: 'translateY(0)', opacity: 1 },
+          hiddenStyle: { transform: 'translateY(100px)', opacity: 0 },
+        },
+      });
+      let e = $(this).attr("data-filter");
+      a.isotope({ filter: e });
+
+      $(this).addClass("active").siblings().removeClass("active");
+    });
+
+//     // get Masonry instance
+//     let msnry = $grid.data('masonry');
+//
+// // initial items reveal
+//     $grid.imagesLoaded( function() {
+//       $grid.removeClass('are-images-unloaded');
+//       $grid.masonry( 'option', { itemSelector: '.grid__item' });
+//       let $items = $grid.find('.grid__item');
+//       $grid.masonry( 'appended', $items );
+//     });
+//
+//     // init Infinite Scroll
+//     $grid.infiniteScroll({
+//       path: getPenPath,
+//       append: '.grid__item',
+//       outlayer: msnry,
+//       status: '.page-load-status',
+//     });
+
+    // let $viewMoreButton = $('.more');
+    // $viewMoreButton.on( 'click', function() {
+    //   // load next page
+    //   $container.infiniteScroll('loadNextPage');
+    //   // enable loading on scroll
+    //   $container.infiniteScroll( 'option', {
+    //     loadOnScroll: true,
+    //   });
+    //   // hide button
+    //   $viewMoreButton.hide();
+    // });
+
+
+>>>>>>> Stashed changes
     // Enable Text Animation
     $(".tlt").textillate({
       // the default selector to use when detecting multiple texts to animate
@@ -76,31 +142,14 @@
       type: "char",
     });
 
-    // Work Page Masonry
-    $(".grid").isotope({ filter: "*" });
 
-    $(".filtering").on("click", "span", function () {
-      var a = $(".grid").isotope({
-        itemSelector: ".grid-item",
-        percentPosition: true,
-        masonry: {
-          // use element for option
-          columnWidth: ".grid-sizer",
-        },
-      });
-      var e = $(this).attr("data-filter");
-      a.isotope({ filter: e });
-    });
-    $(".filtering").on("click", "span", function () {
-      $(this).addClass("active").siblings().removeClass("active");
-    });
 
     /************
       Live Icons
     ************/
 
     // Globe
-    $("#some_id_or_.some_class").addLiviconEvo({
+    $(".globe").addLiviconEvo({
       name: "globe.svg",
       style: "lines",
       size: "120px",
@@ -158,8 +207,8 @@
       touchEvents: false,
     });
 
-    // Blub
-    $("#some_id_or_.some_class").addLiviconEvo({
+    // Bulb
+    $(".bulb").addLiviconEvo({
       name: "bulb.svg",
       style: "lines",
       size: "120px",
@@ -218,7 +267,7 @@
     });
 
     // Tablet
-    $("#some_id_or_.some_class").addLiviconEvo({
+    $(".responsive").addLiviconEvo({
       name: "responsive.svg",
       style: "lines",
       size: "120px",
@@ -277,7 +326,7 @@
     });
 
     // Camera
-    $("#some_id_or_.some_class").addLiviconEvo({
+    $(".camera").addLiviconEvo({
       name: "camcoder.svg",
       style: "lines",
       size: "120px",

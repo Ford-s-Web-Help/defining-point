@@ -153,7 +153,6 @@ function the_defining_point_scripts() {
 	wp_enqueue_script( 'bootstrap-js' , get_template_directory_uri() . '/bootstrap/js/bootstrap.bundle.min.js', array('jquery') );
 	
 	// Lettering Animate Scripts - Start
-	// wp_enqueue_script( 'olderjs-js' , get_template_directory_uri() . '/js/jquery_10.js', array('jquery') );
 	wp_enqueue_script( 'fittext-js' , get_template_directory_uri() . '/js/textillate/assets/jquery.fittext.js', array('jquery') );
 	wp_enqueue_script( 'lettering-js' , get_template_directory_uri() . '/js/textillate/assets/jquery.lettering.js', array('jquery') );
 	wp_enqueue_script( 'textillate-js' , get_template_directory_uri() . '/js/textillate/jquery.textillate.js', array('jquery') );
@@ -161,13 +160,20 @@ function the_defining_point_scripts() {
 
 	// Work Masonry Scripts - Start
 	wp_enqueue_script( 'isostope-js' , get_template_directory_uri() . '/js/isotope.js', array('jquery') );
+<<<<<<< Updated upstream
 	// Work Masonry Scripts - End
+=======
+    wp_enqueue_script( 'infinatescroll-js' , get_template_directory_uri() . '/js/infinite-scroll.pkgd.min.js', array
+    ('jquery') );
+	// Work Isotope Scripts - End
+>>>>>>> Stashed changes
 
     // SVG Animation Scripts - Start
-    wp_enqueue_style( 'liveicon-style', get_template_directory_uri() . '/js/livIconsevo/css/LivIconsEvo.css' );
-    wp_enqueue_script( 'liveiconsTools-js' , get_template_directory_uri() . '/js/livIconsevo/js/LivIconsEvo.Tools.js', array('jquery') );
-    wp_enqueue_script( 'liveiconsDefaults-js' , get_template_directory_uri() . '/js/livIconsevo/js/LivIconsEvo.defaults.js', array('jquery') );
-    wp_enqueue_script( 'liveicons-js' , get_template_directory_uri() . '/js/livIconsevo/js/LivIconsEvo.min.js', array('jquery') );
+//    wp_enqueue_script( 'olderjs-js' , get_template_directory_uri() . '/js/jquery_10.js', array('jquery') );
+    wp_enqueue_style( 'liveicon-style', get_template_directory_uri() . '/js/LivIconsEvo/css/LivIconsEvo.css' );
+    wp_enqueue_script( 'liveiconsTools-js' , get_template_directory_uri() . '/js/LivIconsEvo/js/LivIconsEvo.Tools.js', array('jquery') );
+    wp_enqueue_script( 'liveiconsDefaults-js' , get_template_directory_uri() . '/js/LivIconsEvo/js/LivIconsEvo.defaults.js', array('jquery') );
+    wp_enqueue_script( 'liveicons-js' , get_template_directory_uri() . '/js/LivIconsEvo/js/LivIconsEvo.min.js', array('jquery') );
     //  SVG Animation Scripts - End
 
 
