@@ -31,18 +31,15 @@
 		</div>
 	</div>
 	</a>
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-	<div class="event-info collapse position-absolute <?php echo $serviceTitle; ?>" id="collapseExample<?php echo $serviceTitle; ?>">
-=======
+
 	<div class="event-info collapse event-pos <?php echo $serviceTitle; ?>"
          id="collapseExample<?php echo $serviceTitle; ?>">
->>>>>>> main
+
 		<span>Icon Here</span><?php the_title( '<h3>', '</h3>' ); ?>
 		<?php echo get_field('service_summary'); ?>
-	</div>
-</div>
-=======
+
+    </div>
+
     <div class="service-group">
             <div class="event-info collapse event-pos <?php echo $serviceTitle; ?>"
                  id="Service<?php echo $serviceTitle; ?>">
@@ -141,8 +138,5 @@
                 </div>
             <?php endif; ?>
         </div>
-    </div>
+</div>
 <?php endif; ?>
-
-
->>>>>>> Stashed changes

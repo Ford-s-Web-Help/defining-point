@@ -9,10 +9,7 @@
       $("#slideOverlay").css("right", el.offsetWidth - event.clientX);
     });
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-    //Service Collapse Bind
+
 
     var $myGroup = $('#servicebox');
     $myGroup.on('show.bs.collapse','.collapse', function() {
@@ -75,13 +72,10 @@
     // });
 
 
->>>>>>> Stashed changes
-=======
     // Lazy Load Work Images
 
 
 
->>>>>>> main
     // Enable Text Animation
     $(".tlt").textillate({
       // the default selector to use when detecting multiple texts to animate

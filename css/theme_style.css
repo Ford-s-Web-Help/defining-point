@@ -381,12 +381,6 @@ nav.navbar .navbar-toggler {
 .services .event-info {
   color: #fff;
   padding: 2rem;
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-  z-index: 999;
-}
-
-=======
   margin: 1rem;
   max-width: 33rem;
   top: 44rem;
@@ -401,21 +395,13 @@ nav.navbar .navbar-toggler {
   position: absolute;
   overflow: hidden;
   font-size: 0.8em;
-}
-
->>>>>>> Stashed changes
-=======
   margin: 1rem;
   max-width: 33rem;
   top: 42rem;
   z-index: 999;
 }
 
-.service .event-info.event-pos{
-  position: absolute;
-}
 
->>>>>>> main
 .services .event-info.creative {
   background: rgba(13, 105, 175, 1);
   right: 10rem;
@@ -432,20 +418,9 @@ nav.navbar .navbar-toggler {
 }
 
 .services .event-info.technology {
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-  background: #f13a2d;
-  top: 38rem;
-  left: 15rem;
-=======
   background: rgba(239, 67, 35, 1);
   left: 10rem;
   min-height: 26rem;
->>>>>>> Stashed changes
-=======
-  background: rgba(239, 67, 35, 1);
-  left: 10rem;
->>>>>>> main
 }
 
 .tech-body{
@@ -500,9 +475,11 @@ nav.navbar .navbar-toggler {
   margin-bottom: 0.3125em;
   text-transform: uppercase;
 }
+
 .filtering span:last-child {
   margin: 0;
 }
+
 /* ---- .grid-item ---- */
 /* .grid-sizer,
 .grid-item { width: 20%; }
@@ -520,11 +497,7 @@ nav.navbar .navbar-toggler {
   height: 200px;
 } */
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> main
+
 .work .card {
   border: none;
 }
@@ -555,13 +528,12 @@ nav.navbar .navbar-toggler {
   text-transform: capitalize;
 }
 
-<<<<<<< HEAD
+
 .post-type-archive-work .pagination{
   display: block;
 }
 
-=======
->>>>>>> main
+
 .post-type-archive-work .more a.btn{
   color: rgba(77, 60, 55, 1);
   border: 1px solid;
@@ -573,10 +545,7 @@ nav.navbar .navbar-toggler {
 }
 
 
-<<<<<<< HEAD
->>>>>>> Stashed changes
-=======
->>>>>>> main
+
 /** Contact Form **/
 .contact h2 {
   font-size: 1.2169em;
@@ -727,11 +696,6 @@ Media Queries
     margin: 0 auto;
   }
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> main
   .service .event-info.event-pos{
     position: relative;
     top: 0;
@@ -753,11 +717,8 @@ Media Queries
     left: 6rem;
   }
 
->>>>>>> Stashed changes
-=======
-  }
 
->>>>>>> main
+
   footer .footer-icons {
     display: inline-flex;
     margin-left: 0;
