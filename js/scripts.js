@@ -9,6 +9,10 @@
       $("#slideOverlay").css("right", el.offsetWidth - event.clientX);
     });
 
+    // Lazy Load Work Images
+
+
+
     // Enable Text Animation
     $(".tlt").textillate({
       // the default selector to use when detecting multiple texts to animate
