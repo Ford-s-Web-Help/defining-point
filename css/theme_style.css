@@ -664,7 +664,7 @@ Media Queries
   #svg-logo {
     display: block;
     position: absolute;
-    top: -50px;
+    top: -25px;
     left: 100px;
     width: 155px;
     z-index: 9999;
@@ -673,6 +673,15 @@ Media Queries
 
   .navbar-nav {
     margin: 0;
+  }
+
+  #primary-menu.navbar-nav {
+    margin: 0;
+    padding: 2rem 0 0 0;
+  }
+
+  #primary-menu.navbar-nav li {
+    padding: 1rem 0 0 0;
   }
 
   .box {
