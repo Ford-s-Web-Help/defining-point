@@ -145,7 +145,7 @@ function the_defining_point_scripts() {
 	wp_enqueue_script( 'the-defining-point-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	// Theme Scripts
-	wp_enqueue_script( 'theme-js' , get_template_directory_uri() . '/js/scripts.js', array('jquery') );
+	wp_enqueue_script( 'theme-js' , get_template_directory_uri() . '/js/scripts.js', array('jquery'), _S_VERSION, true );
 	// End Theme Scripts
 
 	// Adding Bootstrap to the Theme - Start
@@ -169,7 +169,7 @@ function the_defining_point_scripts() {
     // SVG Animation Scripts - Start
 //    wp_enqueue_script( 'olderjs-js' , get_template_directory_uri() . '/js/jquery_10.js', array('jquery') );
     wp_enqueue_style( 'liveicon-style', get_template_directory_uri() . '/js/LivIconsEvo/css/LivIconsEvo.css' );
-    wp_enqueue_script( 'liveiconsTools-js' , get_template_directory_uri() . '/js/LivIconsEvo/js/LivIconsEvo.Tools.js', array('jquery') );
+    wp_enqueue_script( 'liveiconsTools-js' , get_template_directory_uri() . '/js/LivIconsEvo/js/LivIconsEvo.tools.js', array('jquery'), true );
     wp_enqueue_script( 'liveiconsDefaults-js' , get_template_directory_uri() . '/js/LivIconsEvo/js/LivIconsEvo.defaults.js', array('jquery') );
     wp_enqueue_script( 'liveicons-js' , get_template_directory_uri() . '/js/LivIconsEvo/js/LivIconsEvo.min.js', array('jquery') );
     //  SVG Animation Scripts - End
@@ -177,7 +177,7 @@ function the_defining_point_scripts() {
 
 	// Theme CSS
 	wp_enqueue_style( 'theme-animate' , get_template_directory_uri() . '/js/textillate/assets/animate.css' );
-	wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/css/theme_style.css' );
+	wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/css/theme_style.css',_S_VERSION, true  );
 	wp_enqueue_style( 'logo-css', get_template_directory_uri() . '/css/logo.css' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
