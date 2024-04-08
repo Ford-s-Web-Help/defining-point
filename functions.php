@@ -149,8 +149,8 @@ function the_defining_point_scripts() {
 	// End Theme Scripts
 
 	// Adding Bootstrap to the Theme - Start
-	wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css' );
-	wp_enqueue_script( 'bootstrap-js' , get_template_directory_uri() . '/bootstrap/js/bootstrap.bundle.min.js', array('jquery') );
+	wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css', _S_VERSION, true  );
+	wp_enqueue_script( 'bootstrap-js' , get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', array('jquery'), _S_VERSION, true  );
 	
 	// Lettering Animate Scripts - Start
 	wp_enqueue_script( 'fittext-js' , get_template_directory_uri() . '/js/textillate/assets/jquery.fittext.js', array('jquery') );
