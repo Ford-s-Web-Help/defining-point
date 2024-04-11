@@ -208,6 +208,8 @@
       touchEvents: false,
     });
 
+
+
     // Bulb
     $(".bulb").addLiviconEvo({
       name: "bulb.svg",
@@ -385,4 +387,14 @@
       touchEvents: false,
     });
   });
+
+  //service
+  $('.service-btn').click(function(event) {
+    event.preventDefault();
+    let id = $(this).attr('href');
+    console.log(id);
+    $('.event-info.collapse').not(id).hide();
+    $(id).fadeToggle();
+  })
+
 })(jQuery);

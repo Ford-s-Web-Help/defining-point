@@ -20,10 +20,10 @@
 ?>
 <?php if($serviceTitle !== 'technology'): ?>
 <div id="post-<?php the_ID(); ?>" <?php post_class($serviceClass);?>>
- <a data-bs-target="#Service<?php echo $serviceTitle; ?>"
+ <a data-bs-toggle="collapse" data-bs-target="#Service<?php echo $serviceTitle; ?>"
    data-bs-parent="#servicebox"
    href="#Service<?php echo $serviceTitle; ?>" role="button"
-   aria-expanded="false" aria-controls="collapseExample<?php echo $serviceTitle; ?>" class="service-btn">
+   aria-expanded="false" aria-controls="collapseExample<?php echo $serviceTitle; ?>">
 	<div class="card">
 		<img src="<?php echo esc_html_e(get_field('service_archive_image')); ?>" class="card-img" />
 		<div class="card-img-overlay">
@@ -65,7 +65,7 @@
     <a data-bs-toggle="collapse" data-bs-target="#Service<?php echo $serviceTitle; ?>"
        data-bs-parent="#servicebox"
        href="#Service<?php echo $serviceTitle; ?>" role="button"
-       aria-expanded="false" aria-controls="collapseExample<?php echo $serviceTitle; ?>" class="service-btn">
+       aria-expanded="false" aria-controls="collapseExample<?php echo $serviceTitle; ?>">
         <div class="card">
             <img src="<?php echo esc_html_e(get_field('service_archive_image')); ?>" class="card-img" />
             <div class="card-img-overlay">

@@ -82,7 +82,8 @@ get_header();
                                             (wp_trim_words
                                             ( get_field('work_body'),
                                                 60 )); ?></p>
-                                        <a href="<?php the_permalink(); ?>" class="btn btn btn-outline-secondary">Follow</a>
+                                        <!-- <a href="<?php the_permalink(); ?>" class="btn btn btn-outline-secondary">Follow</a> -->
+                                        <a href="https://www.instagram.com/thedefiningpoint/" class="btn btn btn-outline-secondary">Follow</a>
                                     </div>
                                 </div>
                             </div>      
@@ -100,9 +101,9 @@ get_header();
                     ?>
             
             </div>
-            <div class="more text-center p-4 mt-3 mb-5">
+            <!-- <div class="more text-center p-4 mt-3 mb-5">
                 <a id="loadMore" class="btn btn btn-outline-secondary" href="#" role="button">Load More</a>
-            </div>
+            </div> -->
         </div>
 </main><!-- #main -->
 

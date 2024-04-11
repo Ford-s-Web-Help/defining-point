@@ -36,7 +36,7 @@ get_header(); ?>
 						?>
 						
 							<div  class="carousel-item">
-							<div id="slideOverlay" style="position: absolute; background-color: rgba(58, 86, 165, 0.5); top:0; bottom: 0; left:0; right:100px;"></div>
+							<div id="slideOverlay" style="position: absolute; background-color: rgba(58, 86, 165, 0.5); top:0; bottom: 0; left:0; right:0px;"></div>
 									<img src="<?php echo  esc_html_e($slideImage); ?>" class="d-block w-100 img-fluid" alt="<?php echo  esc_html_e($slideTitle); ?>">
 							</div>
 							
