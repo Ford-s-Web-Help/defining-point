@@ -12,9 +12,7 @@ get_header();
 <main id="primary" class="site-main">
     <?php if ( have_posts() ) : ?>
         <div class="container-fluid">
-            <div class="row page-title text-center" style="background: url('<?php echo
-            get_template_directory_uri(); ?>/img/headers/work-header-bg.jpg'); background-size:
-                    cover; background-position: center;">
+            <div class="row page-title text-center" style="background: url('<?php echo  get_template_directory_uri(); ?>/img/headers/work-header.jpg'); background-size: cover; background-position: center;">
                 <div class="col-12">
                     <h1 class="entry-title"><?php post_type_archive_title(); ?></h1>
                 </div>
@@ -24,7 +22,6 @@ get_header();
             <div class="row text-center mt-4 mb-2 page-heading">
                 <div class="col-12">
                     <h2>The Defining Point</h2>
-                    <h3>News</h3>
                 </div>
             </div>
             <div class="row">
@@ -82,8 +79,7 @@ get_header();
                                             (wp_trim_words
                                             ( get_field('work_body'),
                                                 60 )); ?></p>
-                                        <!-- <a href="<?php the_permalink(); ?>" class="btn btn btn-outline-secondary">Follow</a> -->
-                                        <a href="https://www.instagram.com/thedefiningpoint/" class="btn btn btn-outline-secondary">Follow</a>
+                                        <a href="<?php echo esc_html_e(get_field('url')); ?>" class="btn btn btn-outline-secondary">Follow</a>
                                     </div>
                                 </div>
                             </div>      
@@ -91,7 +87,7 @@ get_header();
                     <?php $count++; ?>
                     <?php endwhile;
 
-                    the_posts_navigation();
+                    //the_posts_navigation();
 
                     else :
 

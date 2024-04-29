@@ -184,10 +184,10 @@
       animated: true,
       eventType: "hover",
       eventOn: "self",
-      autoPlay: false,
+      autoPlay: true,
       delay: 0,
       duration: "default",
-      repeat: "default",
+      repeat: "loop",
       repeatDelay: "default",
       drawOnViewport: false,
       viewportShift: "oneHalf",
@@ -389,12 +389,21 @@
   });
 
   //service
-  $('.service-btn').click(function(event) {
-    event.preventDefault();
-    let id = $(this).attr('href');
-    console.log(id);
-    $('.event-info.collapse').not(id).hide();
-    $(id).fadeToggle();
+  $('.service-btn').mouseover(function() {
+    let id = '#Service'+$(this).data('contentid');
+    $('.event-info').not(id).hide();
+    $(id).fadeIn();
   })
+  $('.service-btn').mouseout(function() {
+    $('.event-info').hide();
+  });
+
+  var splide = new Splide( '#contact-slider', {
+    type : 'loop',
+    drag : 'free',
+    perPage: 4,
+  });
+  
+  splide.mount();
 
 })(jQuery);

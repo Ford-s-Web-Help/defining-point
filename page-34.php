@@ -37,7 +37,7 @@ get_header();
 			<div class="row mt-5 mb-5">
 					<div class="col-12 col-md-6">
 						<div class="contact-info">
-							<div class="address contact-box">
+							<!-- <div class="address contact-box">
 								<div class="card mb-3" style="max-width: 380px;">
 									<div class="row g-0 pt-2">
 										<div class="col-md-3">
@@ -51,7 +51,7 @@ get_header();
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> -->
 							<div class="phone contact-box">
 								<div class="card mb-3" style="max-width: 380px;">
 									<div class="row g-0">
@@ -132,6 +132,25 @@ get_header();
 		<?php endwhile; // end of the loop. ?>
 			
 			
+		</div>
+		<div class="container-fluid">
+		<pre><?php print_r(get_field('contact_image_gallery')); ?></pre>
+		<?php while ( have_posts() ) : the_post(); ?>
+	
+												
+
+		<?php $num = 0; ?>
+		<div class="row">										
+			<?php foreach(get_field('contact_image_gallery') as $img) { ?>
+				<?php $num++; ?>
+				<div class="col p-0 m-0 <?php echo ($num > 3) ? "d-none d-md-block" : ""; ?>"><img src="<?php echo $img['sizes']['contact-image']; ?>" alt="" /></div>
+			<?php } ?> 
+		</div>
+
+
+
+
+		<?php endwhile; ?>
 		</div>
 	</main><!-- #main -->
 

@@ -164,6 +164,11 @@ function the_defining_point_scripts() {
     ('jquery') );
 	// Work Isotope Scripts - End
 
+	// Work Isotope Scripts - Start
+	wp_enqueue_style( 'splide-style' , get_template_directory_uri() . '/libs/splide/dist/css/splide.min.css', array());
+    wp_enqueue_script( 'splide-js' , get_template_directory_uri() . '/libs/splide/dist/js/splide.min.js', array());
+	// Work Isotope Scripts - End
+
 
 
     // SVG Animation Scripts - Start

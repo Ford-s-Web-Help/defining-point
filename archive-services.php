@@ -14,48 +14,39 @@ get_header();
 
 		<?php if ( have_posts() ) : ?>
 			<div class="container-fluid">
-				<div class="row page-title text-center" style="background: url('<?php echo get_template_directory_uri(); ?>/img/headers/services-header-bg.png'); background-size: cover; background-position: center;">
+				<div class="row page-title text-center" style="background: url('<?php echo get_template_directory_uri(); ?>/img/headers/services-header.jpg'); background-size: cover; background-position: center;">
 					<div class="col-12">
 						<h1 class="entry-title"><?php post_type_archive_title(); ?></h1>
 					</div>
 				</div>
 			</div>
-			<div class="container">
-				<div class="row services">
-					<div class="container mt-2 mb-5">
-						<div class="row text-center page-heading pt-3 pb-3 mb-3">
-							<div class="col-12">
-								<h2>We Create</h2>
-								<h3>Strategic Solutions</h3>
-							</div>
-						</div>
-						<div id="servicebox" class="row justify-content-evenly">
-						<?php
-							/* Start the Loop */
-							while ( have_posts() ) :
-								the_post();
+			<div class="text-center services page-heading">
+				<h2>We Create</h2>
+				<h3>Strategic Solutions</h3>
+			</div>
+			<section id="services">
+				<div class="services container">
+					<div id="servicebox" class="row justify-content-evenly">
+					<?php
+						/* Start the Loop */
+						while ( have_posts() ) :
+							the_post();
 
-								/*
-								* Include the Post-Type-specific template for the content.
-								* If you want to override this in a child theme, then include a file
-								* called content-___.php (where ___ is the Post Type name) and that will be used instead.
-								*/
-								get_template_part( 'template-parts/content', get_post_type() );
+							/*
+							* Include the Post-Type-specific template for the content.
+							* If you want to override this in a child theme, then include a file
+							* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+							*/
+							get_template_part( 'template-parts/content', get_post_type() );
 
-							endwhile;
+						endwhile;
 
-							the_posts_navigation();
-
-						else :
-
-							get_template_part( 'template-parts/content', 'none' );
-
-						endif;
-						?>
-						</div>
+						the_posts_navigation();
+					?>
 					</div>
 				</div>
-			</div>
+			</section>
+		<?php endif; ?>
 	</main><!-- #main -->
 <?php
 get_footer();

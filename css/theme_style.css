@@ -192,9 +192,6 @@ nav.navbar .navbar-toggler {
   max-width: 10rem;
 }
 
-.solutions .btn-outline-secondary:hover {
-}
-
 /******** 
   Promos 
 ********/
@@ -305,7 +302,7 @@ nav.navbar .navbar-toggler {
 }
 
 .structure .card .gold:hover {
-  background: rgba(233, 177, 58, 1);
+  background: rgba(77, 60, 55, 1);
   opacity: 0.9;
 }
 
@@ -341,6 +338,16 @@ nav.navbar .navbar-toggler {
 }
 
 /** Services Page **/
+#services {
+  padding-bottom: 80px;
+}
+.services.page-heading {
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+.services.container {
+  max-width: 60rem;
+}
 #servicebox {
   position: relative;
 }
@@ -359,50 +366,41 @@ nav.navbar .navbar-toggler {
 
 .services .service.creative {
   animation: fadeInUpBig; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 2s; /* don't forget to set a duration! */
-  animate-delay: 1s; /* don't forget to set a duration! */
+  animation-duration: 1s; /* don't forget to set a duration! */
 }
 
 .services .service.events {
   animation: fadeInUpBig; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 3s; /* don't forget to set a duration! */
-  animate-delay: 2s; /* don't forget to set a duration! */
+  animation-duration: 1.5s; /* don't forget to set a duration! */
 }
 
 .services .service.broadcast {
   animation: fadeInUpBig; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 4s; /* don't forget to set a duration! */
-  animate-delay: 4s; /* don't forget to set a duration! */
+  animation-duration: 2s; /* don't forget to set a duration! */
+
 }
 
 .services .service.technology {
   animation: fadeInUpBig; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 5s; /* don't forget to set a duration! */
-  animate-delay: 6s; /* don't forget to set a duration! */
-}
-
-.services .event-info {
-  display: none;
-  color: #fff;
-  padding: 2rem;
-  margin: 1rem;
-  max-width: 33rem;
-  min-height: 445px;
-  top: -60px;
-  z-index: 999;
+  animation-duration: 2.5s; /* don't forget to set a duration! */
 }
 
 .services .event-info ul {
   margin: 0;
 }
 
-.service .event-info.event-pos {
+.service .event-info {
+  display: none;
+  color: #fff;
   position: absolute;
   overflow: hidden;
   font-size: 0.8em;
   margin: 1rem;
   max-width: 33rem;
+  min-height: 445px;
+  padding: 2rem;
   top: -60px;
+  bottom: -60px;
   z-index: 999;
 }
 
@@ -417,7 +415,7 @@ nav.navbar .navbar-toggler {
 }
 
 .services .event-info.broadcast {
-  background: rgba(233, 177, 58, 1);
+  background: rgba(77, 60, 55, 1);
   left: -10%;
 }
 
@@ -612,6 +610,8 @@ nav.navbar .navbar-toggler {
 /** Footer **/
 footer {
   background-color: rgba(77, 60, 55, 1);
+  background: url("../img/bg-footer.jpg") no-repeat center;
+  background-size: cover;
   color: #fff;
   padding: 2rem 1rem;
 }
@@ -665,7 +665,7 @@ footer .site-info {
 /***************
 Media Queries
 ***************/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   #svg-logo {
     display: block;
     position: absolute;
@@ -707,13 +707,6 @@ Media Queries
     margin: 0 auto;
   }
 
-  .service .event-info.event-pos {
-    position: relative;
-    top: 0;
-    right: 0;
-    left: 0;
-  }
-
   .service .tech-info {
     background-color: rgba(249, 249, 249, 1);
   }
@@ -730,5 +723,17 @@ Media Queries
   footer .footer-icons {
     display: inline-flex;
     margin-left: 0;
+  }
+
+  .structure .container {
+    padding: 1rem;
+  }
+
+  /* services overrides on mobile */
+  .service .event-info {
+    position: static !important;
+    display: block !important;
+    opacity: 1 !important;
+    max-width: none;
   }
 }
