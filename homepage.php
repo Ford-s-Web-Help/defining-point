@@ -31,12 +31,12 @@ get_header(); ?>
 					
 						<?php foreach ($posts as $post):
 						setup_postdata($post);
-						$slideImage =get_field("slide_image");
+						$img =get_field("slide_image");
 						$slideTitle = get_field("slide_title");
 						?>
 						
 							<div  class="carousel-item">
-								<img src="<?php echo  esc_html_e($slideImage); ?>" class="d-block w-100 img-fluid" alt="<?php echo  esc_html_e($slideTitle); ?>">
+								<img src="<?php echo $img['sizes']['home-slide'] ?>" class="d-block w-100 img-fluid" alt="<?php echo  esc_html_e($slideTitle); ?>" height="<?php echo $img['sizes']['home-slide-height']; ?>" width="<?php echo $img['sizes']['home-slide-width']; ?>" />
 							</div>
 							
 						<?php endforeach; ?>
@@ -180,40 +180,6 @@ get_header(); ?>
 </div>
 <!-- End Services -->
 
-<!-- Start Promos -->
-<?php $posts = get_posts(["posts_per_page" => 1, "post_type" => "promos"]);
-  if ($posts): ?>
-					<?php foreach ($posts as $post):
-         setup_postdata($post); ?>
-						<div class="promos container-fluid justify-content-around text-center" style="background-image:url('<?php echo esc_html_e(get_field(
-          "promo_image")); ?>')">
-						<div class="row">
-							<div class="col-12">
-							 <div class="promos-container">
-								<div class="row">
-									<div class="promo-box">
-										<h3 class="promo-title">
-											<?php echo esc_html_e(get_field("promo_title")); ?>
-										</h3>
-										<h4 class="promo-subtitle">
-											<?php echo esc_html_e(get_field("promo_subtitle")); ?>
-										</h4>
-									</div>
-									<div class="promo-btn">
-										<a class="btn btn btn-outline-secondary" href="<?php echo esc_html_e(get_field("promo_link")); ?>" role="button"><?php echo esc_html_e(get_field("promo_link_text")); ?></a>
-									</div>
-								</div>
-							</div>
-							</div>
-						</div>
-						</div>
-						</div>
-						<?php
-     endforeach; ?>
-						</div>
-				<?php wp_reset_postdata(); ?>
-			<?php endif;
-  ?>
 
 	</main><!-- #main -->
 <?php get_footer();

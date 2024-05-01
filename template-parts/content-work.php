@@ -21,7 +21,12 @@ else{
 <div id="post-<?php the_ID(); ?>" <?php post_class(''.$divclass.'mb-2 interior work-item grid-item');?>>
     <div class="grid-item-content">
         <div class="card">
+            <?php $video = get_field('work_video'); ?>
+            <?php if(!empty($video)) {?>
+                <video src="<?php echo $video; ?>" class="card-img"></video>
+            <?php } else { ?>
             <img src="<?php echo esc_html_e(get_field('work_image')); ?>" class="card-img" />
+            <?php  } ?>
             <div class="card-body text-xs-center text-start">
                 <h4 class="card-category"> <?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?></h4>
                 <h5 class="card-title"><?php the_title(); ?></h5>

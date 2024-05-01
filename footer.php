@@ -12,24 +12,19 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-			<div class="container text-center">
-				<div class="row align-items-center">
-					<div class="col-sm-12 col-md-4">
-						<?php dynamic_sidebar( 'footer_one' ); ?>
-					</div>
-					<div class="col-sm-12 col-md-4 info">
-						<?php dynamic_sidebar( 'footer_two' ); ?>
-					</div>
-					<div class="col-sm-12 col-md-4 text-center">
-						<?php dynamic_sidebar( 'footer_Three' ); ?>
-					</div>
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-sm-12 col-md-6 footer-logo">
+					<?php dynamic_sidebar( 'footer_one' ); ?>
 				</div>
-				<div class="row">
-					<div class="col col-12 site-info">
-						<?php dynamic_sidebar( 'footer_copyright' ); ?>
-					</div>
-				</div>
+				<div class="col-sm-12 col-md-6 footer-info">
+					<?php dynamic_sidebar( 'footer_two' ); ?>
+				</div>	
 			</div>
+			<div id="copyright">
+				<?php dynamic_sidebar( 'footer_copyright' ); ?>
+			</div>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

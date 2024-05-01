@@ -30,7 +30,13 @@ get_header();
 			<div class="row text-center page-heading">
 				<div class="col-12">
 					<h2><?php echo esc_html_e(get_field('heading')); ?></h2>
-					<h3><?php echo esc_html_e(get_field('subtitle')); ?></h3>
+					<h3>
+						<div class="tlt animate-def">
+							<ul class="texts" style="display: none;">
+								<li class="current"><h3>DEFINING<h3></li>
+							</ul>
+						</div>
+					</h3>
 				</div>
 			</div>
 
@@ -133,19 +139,20 @@ get_header();
 			
 			
 		</div>
-		<div class="container-fluid">
-		<pre><?php print_r(get_field('contact_image_gallery')); ?></pre>
+		<div>
 		<?php while ( have_posts() ) : the_post(); ?>
 	
 												
 
-		<?php $num = 0; ?>
-		<div class="row">										
-			<?php foreach(get_field('contact_image_gallery') as $img) { ?>
-				<?php $num++; ?>
-				<div class="col p-0 m-0 <?php echo ($num > 3) ? "d-none d-md-block" : ""; ?>"><img src="<?php echo $img['sizes']['contact-image']; ?>" alt="" /></div>
-			<?php } ?> 
-		</div>
+		<div id="contact-slider" class="splide" role="group" aria-label="Contact Slider Images">
+			<div class="splide__track">
+				<ul class="splide__list">
+					<?php foreach(get_field('contact_image_gallery') as $img) { ?>
+						<li class="splide__slide"><img src="<?php echo $img['sizes']['contact-image']; ?>" alt="<?php echo $img['title']; ?>" height="<?php echo $img['sizes']['contact-image-height']; ?>" width="<?php echo $img['sizes']['contact-image-width']; ?>" /></li>
+					<?php } ?> 
+				</ul>
+			</div>
+		</div>	
 
 
 

@@ -20,6 +20,9 @@ body {
 h1 {
   color: #ffffff;
   font-size: 5.2581em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
 h1.entry-title {
@@ -96,7 +99,7 @@ nav.navbar .navbar-toggler {
 .page-title {
   background-size: cover;
   background-position: center;
-  padding: 8rem 0;
+  padding: 12rem 0;
 }
 
 .page-body {
@@ -623,7 +626,21 @@ footer a {
 footer .info p {
   margin-bottom: 0.3rem;
 }
-
+.footer-logo {
+  text-align: right;
+}
+.footer-info {
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+}
+#copyright {
+  text-align: center;
+  font-size: 12px;
+  padding-top: 20px;
+}
 footer .footer-icons {
   display: inline-flex;
   margin-left: 0;

@@ -42,8 +42,7 @@ get_header();
                             $termName = $category->name;
                             $cleanSpace = preg_replace('/\s+/u', '-', $termNameLow);
 
-                            echo '<span class="" data-filter=".category-'
-                                .$cleanSpace.'">' . $termName. '</span> ';
+                            echo '<span class="" data-filter=".category-'.$cleanSpace.'">' . $termName. '</span> ';
                         }
                         ?>
                 </div>
@@ -70,7 +69,14 @@ get_header();
                         <div id="post-<?php the_ID(); ?>" <?php post_class('col-xs-12 col-md-4 mb-2 p-2 interior work-item grid-item '.$divClass.'');?>>
                             <div class="grid-item-content">
                                 <div class="card">
-                                    <img src="<?php echo esc_html_e(get_field('work_image')); ?>" class="card-img" />
+                                    <?php $video = get_field('work_video'); ?>
+                                    <?php if(!empty($video)) {?>
+                                        <video class="card-img" height="740" muted autoplay loop controls>
+                                            <source src="<?php echo $video; ?>" type="video/mp4" />
+                                        </video>
+                                    <?php } else { ?>
+                                        <img src="<?php echo esc_html_e(get_field('work_image')); ?>" class="card-img" />
+                                    <?php  } ?>
                                     <div class="card-body text-xs-center text-start">
                                         <h4 class="card-category pb-2"> <?php foreach(
                                                 (get_the_category()) as $category) { echo $category->cat_name . ' '; } ?></h4>

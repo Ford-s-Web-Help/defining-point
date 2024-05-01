@@ -401,7 +401,11 @@
   var splide = new Splide( '#contact-slider', {
     type : 'loop',
     drag : 'free',
-    perPage: 4,
+    autoWidth: true,
+    padding: '5rem',
+    autoplay: true,
+    lazyLoad: 'nearby',
+    pagination: false
   });
   
   splide.mount();
