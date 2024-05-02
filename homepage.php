@@ -77,7 +77,7 @@ get_header(); ?>
 	<!-- Start Sizzle Reel -->
 	<div class="box sizzle">
 		<div class="container">
-			<div class="row">
+			<!-- <div class="row">
 				<div class="col-12 text-center">
 					<h3>Watch Our</h3>
 					<h4>Sizzle Reel</h4>
@@ -87,16 +87,19 @@ get_header(); ?>
 					<img src="<?php echo get_template_directory_uri(); ?>/img/sizzle-icon.png" alt="Down Arrow" />
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<div class="row">
 				<div class="col-12 text-center">
 				<?php
-	$sizzleReel_Url = get_field("sizzle_reel", 7);
-	while (have_posts()):
-		the_post(); ?>
-					<a class="sizzle-reel" href="<?php echo esc_html_e($sizzleReel_Url); ?>" target="_blank" title="Watch Our Sizzle Reel">
-					<img src="<?php echo get_template_directory_uri(); ?>/img/sizzle-reel.jpg" alt="Sizzle Reel Image" />
-				</a>
+				$sizzleReel_vimeo_id = get_field("sizzle_reel", 7);
+				while (have_posts()):
+					the_post(); ?>
+					<div id="sizzle-reel">
+						<div style="padding:56.25% 0 0 0;position:relative;">
+							<iframe src="https://player.vimeo.com/video/<?php echo $sizzleReel_vimeo_id; ?>?h=68357cc748&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="TDP Sizzle v1"></iframe>
+						</div>
+						<script src="https://player.vimeo.com/api/player.js"></script>
+					</div>
 				<?php endwhile; ?>
 				</div>
 			</div>

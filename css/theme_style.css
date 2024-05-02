@@ -19,7 +19,7 @@ body {
 }
 h1 {
   color: #ffffff;
-  font-size: 5.2581em;
+  font-size: 10em;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -33,6 +33,7 @@ h2 {
   color: rgba(77, 60, 55, 1);
   text-transform: uppercase;
   font-size: 2em;
+  font-weight: bold;
 }
 
 .page-heading {
@@ -99,7 +100,7 @@ nav.navbar .navbar-toggler {
 .page-title {
   background-size: cover;
   background-position: center;
-  padding: 12rem 0;
+  padding: 10rem 0;
 }
 
 .page-body {
@@ -115,7 +116,10 @@ nav.navbar .navbar-toggler {
   padding: 4rem;
   margin: 2rem;
 }
-
+.box.sizzle {
+  padding-top: 0;
+  margin-top: 0;
+}
 .box h3 {
   font-size: 1.2169em;
   padding: 1rem 0;
@@ -234,7 +238,7 @@ nav.navbar .navbar-toggler {
 /** About Page **/
 
 .about .row {
-  padding: 4rem 0;
+  padding: 2rem 0;
 }
 
 .abt-grey {
@@ -243,6 +247,10 @@ nav.navbar .navbar-toggler {
 
 .about .about-container {
   max-width: 80rem;
+}
+
+.about-container img {
+  margin-bottom: 2rem;
 }
 
 .about p {
@@ -262,16 +270,16 @@ nav.navbar .navbar-toggler {
   padding: 4rem;
 }
 
-.structure .card {
+.structure .flip-card {
   color: #fff;
 }
 
-.structure .card h2 {
+.structure .flip-card h2 {
   color: #fff;
   font-size: 1.2em;
 }
 
-.structure .card p {
+.structure .flip-card p {
   font-size: 0.8em;
 }
 
@@ -279,34 +287,56 @@ nav.navbar .navbar-toggler {
   padding: 2rem 1rem;
 }
 
-.structure .structure-info .card-title,
-.structure .structure-info .card-text {
-  display: none;
+.flip-card {
+  background-color: transparent;
+  perspective: 1000px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
 }
 
-.structure .structure-info:hover .card-title,
-.structure .structure-info:hover .card-text {
-  display: block;
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
-.structure .card .red:hover {
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.structure .flip-card .red {
   background: rgba(239, 67, 35, 1);
-  opacity: 0.9;
 }
 
-.structure .card .blue:hover {
+.structure .flip-card .blue {
   background: rgba(13, 105, 175, 1);
-  opacity: 0.9;
 }
 
-.structure .card .green:hover {
+.structure .flip-card .green {
   background: rgba(171, 208, 55, 1);
-  opacity: 0.9;
 }
 
-.structure .card .gold:hover {
+.structure .flip-card .gold {
   background: rgba(77, 60, 55, 1);
-  opacity: 0.9;
 }
 
 /** Solutions **/
@@ -571,7 +601,7 @@ nav.navbar .navbar-toggler {
 
 .card-body.social ul li {
   border: none;
-  padding: 1rem 1rem 0 0;
+  padding: 0 1rem 0 0;
 }
 
 .contact-form {
@@ -581,8 +611,10 @@ nav.navbar .navbar-toggler {
 }
 
 .contact-form div.wpforms-container-full .wpforms-field-label {
-  font-family: "Nanum Gothic", sans-serif;
-  letter-spacing: 0.1em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
 }
 
 .contact-form
@@ -608,6 +640,10 @@ nav.navbar .navbar-toggler {
   textarea.wpforms-field-medium {
   background: rgba(249, 249, 249, 1);
   border-radius: 0;
+}
+
+.contact .card-body {
+  padding-top: 0;
 }
 
 /** Footer **/
@@ -682,7 +718,12 @@ footer .site-info {
 /***************
 Media Queries
 ***************/
+
 @media only screen and (max-width: 768px) {
+
+  h1 {
+    font-size: 5.5em;
+  }
   #svg-logo {
     display: block;
     position: absolute;
@@ -710,6 +751,7 @@ Media Queries
     padding: 2rem;
     margin: 2rem;
   }
+  
 
   .intro h2 span {
     font-size: 3.5rem;
@@ -741,6 +783,13 @@ Media Queries
     display: inline-flex;
     margin-left: 0;
   }
+  .footer-info {
+    text-align: center;
+  }
+  .footer-logo {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
 
   .structure .container {
     padding: 1rem;
@@ -752,5 +801,37 @@ Media Queries
     display: block !important;
     opacity: 1 !important;
     max-width: none;
+  }
+
+  /* about */
+  .flip-card .flip-card-inner {
+    transform: none !important;
+    width: auto;
+    height: auto;
+  }
+  .about-container, 
+  .about-container .text-end {
+    text-align: center !important;
+  }
+
+  /* contact */
+  .contact-info {
+    padding: 0;
+  }
+
+  .flip-card-front {
+    display: none;
+  }
+  .flip-card-img {
+    display: none;
+  }
+  .flip-card-back {
+    position: relative;
+    transform: none;
+  }
+
+  .box.intro, .box.sizzle {
+    padding: 2rem;
+    margin: 0;
   }
 }

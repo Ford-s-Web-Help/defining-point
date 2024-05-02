@@ -1,5 +1,6 @@
 <?php
 /**
+ * CONTACT PAGE
  * The template for displaying all pages
  *
  * This is the template that displays all pages by default.
@@ -59,12 +60,12 @@ get_header();
 								</div>
 							</div> -->
 							<div class="phone contact-box">
-								<div class="card mb-3" style="max-width: 380px;">
+								<div class="card mb-4" style="max-width: 380px;">
 									<div class="row g-0">
-										<div class="col-md-3">
+										<div class="col-3">
 											<img src="<?php echo get_template_directory_uri(); ?>/img/contact/the-defining-point-phone-icon.png" class="img-fluid rounded-start" alt="Red Phone Icon">
 										</div>
-										<div class="col-md-9">
+										<div class="col-9">
 											<div class="card-body">
 												<h5 class="card-title mb-2">Phone</h5>
 												<p class="card-text"><?php echo esc_html_e(get_field('phone')); ?></p>
@@ -74,12 +75,12 @@ get_header();
 								</div>
 							</div>
 							<div class="email contact-box">
-								<div class="card mb-3" style="max-width: 380px;">
+								<div class="card mb-4" style="max-width: 380px;">
 									<div class="row g-0">
-										<div class="col-md-3">
+										<div class="col-3">
 											<img src="<?php echo get_template_directory_uri(); ?>/img/contact/the-defining-point-email-icon.png" class="img-fluid rounded-start" alt="Blue Envelope Icon">
 										</div>
-										<div class="col-md-9">
+										<div class="col-9">
 											<div class="card-body">
 												<h5 class="card-title mb-2">Email</h5>
 												<p class="card-text"><?php echo esc_html_e(get_field('email')); ?></p>
@@ -89,12 +90,12 @@ get_header();
 								</div>
 							</div>
 							<div class="social contact-box">
-								<div class="card mb-3" style="max-width: 380px;">
+								<div class="card mb-4" style="max-width: 380px;">
 										<div class="row g-0">
-											<div class="col-md-3">
+											<div class="col-3">
 												<img src="<?php echo get_template_directory_uri(); ?>/img/contact/the-defining-point-social-icon.png" class="img-fluid rounded-start" alt="Yellow Smart Phone Icon with notification icons">
 											</div>
-											<div class="col-md-9">
+											<div class="col-9">
 												<div class="card-body social">
 													<h5 class="card-title mb-2">Social</h5>
 													<?php if( have_rows('social') ): ?>
